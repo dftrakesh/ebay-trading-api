@@ -1,0 +1,17 @@
+package io.github.dft.amazon.constantcode;
+
+public interface ConstantCodes {
+    String XML_API_PRODUCTION_GATEWAY = "https://api.ebay.com/ws/api.dll";
+    String HTTP_HEADER_KEY_X_EBAY_API_IAF_TOKEN = "X-EBAY-API-IAF-TOKEN";
+    String HTTP_HEADER_KEY_X_EBAY_API_COMPATIBILITY_LEVEL = "X-EBAY-API-COMPATIBILITY-LEVEL";
+    String HTTP_HEADER_KEY_X_EBAY_API_DEV_NAME = "X-EBAY-API-DEV-NAME";
+    String HTTP_HEADER_KEY_X_EBAY_API_APP_NAME = "X-EBAY-API-APP-NAME";
+    String HTTP_HEADER_KEY_X_EBAY_API_CERT_NAME = "X-EBAY-API-CERT-NAME";
+    String HTTP_HEADER_KEY_X_EBAY_API_CALL_NAME = "X-EBAY-API-CALL-NAME";
+    String HTTP_HEADER_KEY_X_EBAY_API_SITEID = "X-EBAY-API-SITEID";
+    String HTTP_HEADER_KEY_CONTENT_TYPE = "Content-Type";
+    String HTTP_HEADER_CONTENT_TYPE_VALUE = "text/xml";
+    String HTTP_HEADER_CONTENT_LENGTH = "Content-Length";
+
+    String EBAY_API_CALL_NAME_FETCH_TOKEN = "FetchToken";
+}
