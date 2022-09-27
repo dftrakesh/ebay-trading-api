@@ -1,7 +1,7 @@
-package io.github.dft.amazon;
+package io.github.dft.ebay;
 
-import io.github.dft.amazon.model.RequesterCredentials;
-import io.github.dft.amazon.model.fetchtoken.FetchTokenRequest;
+import io.github.dft.ebay.model.RequesterCredentials;
+import io.github.dft.ebay.model.fetchtoken.FetchTokenRequest;
 import lombok.SneakyThrows;
 
 import java.net.URI;
@@ -9,7 +9,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-import static io.github.dft.amazon.constantcode.ConstantCodes.*;
+import static io.github.dft.ebay.constantcode.ConstantCodes.*;
 
 public class FetchToken extends EbayTradingAPISdk {
 

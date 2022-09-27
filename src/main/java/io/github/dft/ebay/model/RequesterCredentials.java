@@ -1,12 +1,9 @@
-package io.github.dft.amazon.model;
+package io.github.dft.ebay.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.time.ZonedDateTime;
-import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -19,5 +16,6 @@ public class RequesterCredentials {
     private String certName;
     private String scopes;
     private String ruName;
+    private String siteID;
     private String apiCompatibilityLevel;
 }

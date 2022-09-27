@@ -1,4 +1,4 @@
-package io.github.dft.amazon.model.fetchtoken;
+package io.github.dft.ebay.model.fetchtoken;
 
 public class FetchTokenRequest {
     private String Version;
