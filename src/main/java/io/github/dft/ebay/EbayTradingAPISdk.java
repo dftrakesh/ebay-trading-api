@@ -1,8 +1,8 @@
-package io.github.dft.amazon;
+package io.github.dft.ebay;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import io.github.dft.amazon.model.RequesterCredentials;
+import com.fasterxml.jackson.dataformat.xml.ser.ToXmlGenerator;
+import io.github.dft.ebay.model.RequesterCredentials;
 import lombok.Data;
 import lombok.SneakyThrows;
 
@@ -19,6 +19,7 @@ public class EbayTradingAPISdk {
 
     @SneakyThrows
     public String toStr(Object t) {
+        xmlMapper.configure(ToXmlGenerator.Feature.WRITE_XML_DECLARATION, true);
         return xmlMapper.writeValueAsString(t);
     }
 }

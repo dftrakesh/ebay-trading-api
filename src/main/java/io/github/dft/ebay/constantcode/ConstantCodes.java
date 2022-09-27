@@ -1,4 +1,4 @@
-package io.github.dft.amazon.constantcode;
+package io.github.dft.ebay.constantcode;
 
 public interface ConstantCodes {
     String XML_API_PRODUCTION_GATEWAY = "https://api.ebay.com/ws/api.dll";
@@ -12,6 +12,10 @@ public interface ConstantCodes {
     String HTTP_HEADER_KEY_CONTENT_TYPE = "Content-Type";
     String HTTP_HEADER_CONTENT_TYPE_VALUE = "text/xml";
     String HTTP_HEADER_CONTENT_LENGTH = "Content-Length";
-
     String EBAY_API_CALL_NAME_FETCH_TOKEN = "FetchToken";
+
+    String EBAY_API_CALL_NAME_GET_SELLER_LIST = "GetSellerList";
+    String EBAY_API_CALL_NAME_GET_USER = "GetItemGetUser";
+    String EBAY_API_CALL_NAME_GET_ITEM = "GetItem";
+
 }
