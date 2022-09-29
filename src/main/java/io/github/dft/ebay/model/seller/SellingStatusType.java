@@ -11,5 +11,5 @@ import java.io.Serializable;
 public class SellingStatusType implements Serializable {
 
     @JacksonXmlProperty(localName = "CurrentPrice")
-    protected AmountType currentPrice;
+    protected Double currentPrice;
 }

@@ -5,6 +5,7 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import io.github.dft.ebay.model.RequesterCredentials;
 import io.github.dft.ebay.model.seller.GetSellerListRequest;
 import io.github.dft.ebay.model.seller.GetSellerListResponse;
+import io.github.dft.ebay.model.seller.Pagination;
 import io.github.dft.ebay.model.token.EbayToken;
 
 import java.io.IOException;
@@ -13,6 +14,8 @@ import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import static io.github.dft.ebay.constantcode.ConstantCodes.*;
 
@@ -39,10 +42,24 @@ public class SellerAPI extends EbayTradingAPISdk {
                 .POST(HttpRequest.BodyPublishers.ofString(payload))
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        String strResponse =response.body();
+        String strResponse = response.body();
+
 
         XmlMapper xmlMapper = new XmlMapper();
         xmlMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
         return xmlMapper.readValue(strResponse, GetSellerListResponse.class);
+    }
+
+    public GetSellerListResponse getItems(Calendar startTimeFrom, Calendar startTimeTo, int iPage) throws URISyntaxException, IOException, InterruptedException {
+        GetSellerListRequest getSellerListRequest = new GetSellerListRequest();
+        getSellerListRequest.setEndTimeFrom(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.000'Z'").format(startTimeFrom.getTime()));
+        getSellerListRequest.setEndTimeTo(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.000'Z'").format(startTimeTo.getTime()));
+        getSellerListRequest.setGranularityLevel("Coarse");
+        getSellerListRequest.setIncludeVariations(true);
+        Pagination pagination = new Pagination();
+        pagination.setPageNumber(iPage);
+        getSellerListRequest.setPagination(pagination);
+
+        return getItems(getSellerListRequest);
     }
 }
