@@ -15,7 +15,7 @@ public interface ConstantCodes {
     String EBAY_API_CALL_NAME_FETCH_TOKEN = "FetchToken";
 
     String EBAY_API_CALL_NAME_GET_SELLER_LIST = "GetSellerList";
-    String EBAY_API_CALL_NAME_GET_USER = "GetItemGetUser";
+    String EBAY_API_CALL_NAME_GET_USER = "GetUser";
     String EBAY_API_CALL_NAME_GET_ITEM = "GetItem";
 
 }

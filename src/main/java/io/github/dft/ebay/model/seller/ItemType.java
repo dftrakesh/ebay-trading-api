@@ -43,4 +43,5 @@ public class ItemType implements Serializable {
 
     @JacksonXmlProperty(localName = "PictureDetails")
     private PictureDetailsType pictureDetails;
+
 }

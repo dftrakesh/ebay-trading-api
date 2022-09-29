@@ -30,4 +30,8 @@ public class GetSellerListRequest {
 
     @JacksonXmlProperty(localName = "RequesterCredentials")
     private EbayToken RequesterCredentials;
+
+    @JacksonXmlProperty(localName = "IncludeVariations")
+    private boolean includeVariations;
+
 }
