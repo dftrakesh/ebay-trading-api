@@ -22,7 +22,7 @@ public class FetchToken extends EbayTradingAPISdk {
     }
 
     @SneakyThrows
-    public void fetchToken(FetchTokenRequest fetchTokenRequest) {
+    public String fetchToken(FetchTokenRequest fetchTokenRequest) {
 
         String payload = toStr(fetchTokenRequest);
         HttpRequest request = HttpRequest.newBuilder(new URI(XML_API_PRODUCTION_GATEWAY))
@@ -35,9 +35,8 @@ public class FetchToken extends EbayTradingAPISdk {
                 .POST(HttpRequest.BodyPublishers.ofString(payload))
                 .build();
 
-        HttpResponse<String> response = client.send(request,
-                HttpResponse.BodyHandlers.ofString());
-        System.out.println(response.body());
+        return client.send(request,
+                HttpResponse.BodyHandlers.ofString()).body();
     }
 
 }

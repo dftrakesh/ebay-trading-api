@@ -44,7 +44,6 @@ public class SellerAPI extends EbayTradingAPISdk {
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
         String strResponse = response.body();
 
-
         XmlMapper xmlMapper = new XmlMapper();
         xmlMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
         return xmlMapper.readValue(strResponse, GetSellerListResponse.class);

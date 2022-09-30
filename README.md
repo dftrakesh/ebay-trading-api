@@ -1,1 +1,1 @@
-# amazon-sp-api
+# ebay trading API with JDK 11
