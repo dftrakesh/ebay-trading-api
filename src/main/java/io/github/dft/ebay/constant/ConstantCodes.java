@@ -1,4 +1,4 @@
-package io.github.dft.ebay.constantcode;
+package io.github.dft.ebay.constant;
 
 public interface ConstantCodes {
     String XML_API_PRODUCTION_GATEWAY = "https://api.ebay.com/ws/api.dll";
@@ -18,4 +18,5 @@ public interface ConstantCodes {
     String EBAY_API_CALL_NAME_GET_USER = "GetUser";
     String EBAY_API_CALL_NAME_GET_ITEM = "GetItem";
 
+    String EBAY_API_CALL_NAME_GET_ORDERS = "GetOrders";
 }
