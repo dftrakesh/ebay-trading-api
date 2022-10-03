@@ -9,7 +9,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-import static io.github.dft.ebay.constantcode.ConstantCodes.*;
+import static io.github.dft.ebay.constant.ConstantCodes.*;
 
 public class FetchToken extends EbayTradingAPISdk {
 
