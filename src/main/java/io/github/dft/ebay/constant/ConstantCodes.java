@@ -4,6 +4,7 @@ public interface ConstantCodes {
     String XML_API_PRODUCTION_GATEWAY = "https://api.ebay.com/ws/api.dll";
     String HTTP_HEADER_KEY_X_EBAY_API_IAF_TOKEN = "X-EBAY-API-IAF-TOKEN";
     String HTTP_HEADER_KEY_X_EBAY_API_COMPATIBILITY_LEVEL = "X-EBAY-API-COMPATIBILITY-LEVEL";
+    String HTTP_HEADER_KEY_X_EBAY_API_DETAIL_LEVEL = "X-EBAY-API-DETAIL-LEVEL";
     String HTTP_HEADER_KEY_X_EBAY_API_DEV_NAME = "X-EBAY-API-DEV-NAME";
     String HTTP_HEADER_KEY_X_EBAY_API_APP_NAME = "X-EBAY-API-APP-NAME";
     String HTTP_HEADER_KEY_X_EBAY_API_CERT_NAME = "X-EBAY-API-CERT-NAME";
@@ -11,7 +12,7 @@ public interface ConstantCodes {
     String HTTP_HEADER_KEY_X_EBAY_API_SITEID = "X-EBAY-API-SITEID";
     String HTTP_HEADER_KEY_CONTENT_TYPE = "Content-Type";
     String HTTP_HEADER_CONTENT_TYPE_VALUE = "text/xml";
-    String HTTP_HEADER_CONTENT_LENGTH = "Content-Length";
+    String HTTP_HEADER_X_EBAY_API_DETAIL_LEVEL_VALUE_RETURN_ALL = "0";
     String EBAY_API_CALL_NAME_FETCH_TOKEN = "FetchToken";
 
     String EBAY_API_CALL_NAME_GET_SELLER_LIST = "GetSellerList";
@@ -19,4 +20,5 @@ public interface ConstantCodes {
     String EBAY_API_CALL_NAME_GET_ITEM = "GetItem";
 
     String EBAY_API_CALL_NAME_GET_ORDERS = "GetOrders";
+    String EBAY_API_CALL_NAME_SET_NOTIFICATION_PREFERENCES = "SetNotificationPreferences";
 }

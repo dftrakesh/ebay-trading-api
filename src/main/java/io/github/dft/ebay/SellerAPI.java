@@ -20,11 +20,9 @@ import java.util.Calendar;
 import static io.github.dft.ebay.constant.ConstantCodes.*;
 
 public class SellerAPI extends EbayTradingAPISdk {
-    private final HttpClient client;
 
     public SellerAPI(RequesterCredentials requesterCredentials) {
         super(requesterCredentials);
-        client = HttpClient.newHttpClient();
     }
 
     public GetSellerListResponse getItems(GetSellerListRequest getSellerListRequest) throws URISyntaxException, IOException, InterruptedException {

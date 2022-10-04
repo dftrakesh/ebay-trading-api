@@ -17,11 +17,9 @@ import java.net.http.HttpResponse;
 import static io.github.dft.ebay.constant.ConstantCodes.*;
 
 public class ItemAPI extends EbayTradingAPISdk {
-    private final HttpClient client;
 
     public ItemAPI(RequesterCredentials requesterCredentials) {
         super(requesterCredentials);
-        client = HttpClient.newHttpClient();
     }
 
     public GetItemResponse getItem(GetItemRequest getItemRequest) throws URISyntaxException, IOException, InterruptedException {

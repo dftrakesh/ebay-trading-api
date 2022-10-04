@@ -13,12 +13,9 @@ import static io.github.dft.ebay.constant.ConstantCodes.*;
 
 public class FetchToken extends EbayTradingAPISdk {
 
-    private final HttpClient client;
-
     @SneakyThrows
     public FetchToken(RequesterCredentials accessCredentials) {
         super(accessCredentials);
-        client = HttpClient.newHttpClient();
     }
 
     @SneakyThrows

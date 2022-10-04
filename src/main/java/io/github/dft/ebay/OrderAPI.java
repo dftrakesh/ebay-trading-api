@@ -21,11 +21,8 @@ import static io.github.dft.ebay.constant.ConstantCodes.HTTP_HEADER_CONTENT_TYPE
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class OrderAPI extends EbayTradingAPISdk {
 
-    private final HttpClient client;
-
     public OrderAPI(RequesterCredentials requesterCredentials) {
         super(requesterCredentials);
-        client = HttpClient.newHttpClient();
     }
 
     public GetOrdersResponse getOrders(GetOrdersRequest getOrderRequest) throws IOException, InterruptedException, URISyntaxException {
