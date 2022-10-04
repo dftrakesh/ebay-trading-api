@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import io.github.dft.ebay.model.RequesterCredentials;
 import io.github.dft.ebay.model.notification.SetNotificationPreferencesRequest;
+import io.github.dft.ebay.model.notification.SetNotificationPreferencesResponse;
 import io.github.dft.ebay.model.order.GetOrdersRequest;
 import io.github.dft.ebay.model.order.GetOrdersResponse;
 import io.github.dft.ebay.model.token.EbayToken;
@@ -27,7 +28,7 @@ public class NotificationPreferencesAPI extends EbayTradingAPISdk {
     }
 
     @SneakyThrows
-    public String setNotificationPreferences(SetNotificationPreferencesRequest setNotificationPreferencesRequest) {
+    public SetNotificationPreferencesResponse setNotificationPreferences(SetNotificationPreferencesRequest setNotificationPreferencesRequest) {
         setNotificationPreferencesRequest.setRequesterCredentials(new EbayToken(requesterCredentials.getEBayAuthToken()));
         HttpRequest request = HttpRequest.newBuilder(new URI(XML_API_PRODUCTION_GATEWAY))
                 .header(HTTP_HEADER_KEY_X_EBAY_API_CALL_NAME, EBAY_API_CALL_NAME_SET_NOTIFICATION_PREFERENCES)
@@ -43,8 +44,7 @@ public class NotificationPreferencesAPI extends EbayTradingAPISdk {
                 .build();
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        return response.body();
-        //String strResponse = response.body();
-     //   return toObj(strResponse, GetOrdersResponse.class);
+        String strResponse = response.body();
+        return toObj(strResponse, SetNotificationPreferencesResponse.class);
     }
 }
