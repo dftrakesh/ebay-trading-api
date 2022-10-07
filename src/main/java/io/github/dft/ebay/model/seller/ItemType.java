@@ -29,6 +29,9 @@ public class ItemType implements Serializable {
     @JacksonXmlProperty(localName = "Quantity")
     private Integer quantity;
 
+    @JacksonXmlProperty(localName = "QuantityAvailable")
+    private Integer quantityAvailable;
+
     @JacksonXmlProperty(localName = "SellingStatus")
     private SellingStatusType sellingStatus;
 

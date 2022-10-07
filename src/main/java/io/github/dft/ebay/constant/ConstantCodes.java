@@ -21,4 +21,8 @@ public interface ConstantCodes {
 
     String EBAY_API_CALL_NAME_GET_ORDERS = "GetOrders";
     String EBAY_API_CALL_NAME_SET_NOTIFICATION_PREFERENCES = "SetNotificationPreferences";
+
+    String EBAY_API_CALL_NAME_REVISE_ITEM = "ReviseItem";
+
+    String EBAY_API_CALL_NAME_REVISE_FIXED_PRICE_ITEM = "ReviseFixedPriceItem";
 }
