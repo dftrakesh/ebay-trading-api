@@ -2,9 +2,7 @@ package io.github.dft.ebay;
 
 import com.google.gson.Gson;
 import io.github.dft.ebay.constant.ConstantCodes;
-import io.github.dft.ebay.model.RequesterCredentials;
 import io.github.dft.ebay.model.token.AccessToken;
-import io.github.dft.ebay.model.token.RefreshToken;
 import lombok.SneakyThrows;
 
 import java.net.URI;
@@ -16,7 +14,6 @@ import java.util.Base64;
 import static io.github.dft.ebay.constant.ConstantCodes.*;
 
 public class TokenAPI {
-
 
     @SneakyThrows
     public AccessToken getRefreshTokenFromAccessToken(String refreshToken, String appId, String certId) {
