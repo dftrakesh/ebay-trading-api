@@ -9,6 +9,9 @@ import lombok.Data;
 import lombok.SneakyThrows;
 
 import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.util.concurrent.CompletableFuture;
 
 @Data
 public class EbayTradingAPISdk {
@@ -35,5 +38,32 @@ public class EbayTradingAPISdk {
     @SneakyThrows
     public <T> T  toObj(String response,Class<T> var) {
         return xmlMapper.readValue(response, var);
+    }
+
+    @SneakyThrows
+    public <T> T getRequestWrapped(HttpRequest request, HttpResponse.BodyHandler<T> handler) {
+        try {
+            return (T) ((HttpResponse) this.client.sendAsync(request, handler).thenComposeAsync((response) -> {
+                return this.tryResend(this.client, request, handler, response, 1);
+            }).get()).body();
+        } catch (Throwable var4) {
+            throw var4;
+        }
+    }
+
+    @SneakyThrows
+    public <T> CompletableFuture<HttpResponse<T>> tryResend(HttpClient client, HttpRequest request, HttpResponse.BodyHandler<T> handler, HttpResponse<T> resp, int count) {
+        try {
+            if (resp.statusCode() == 429 && count < 50) {
+                Thread.sleep(15000L);
+                return client.sendAsync(request, handler).thenComposeAsync((response) -> {
+                    return this.tryResend(client, request, handler, response, count + 1);
+                });
+            } else {
+                return CompletableFuture.completedFuture(resp);
+            }
+        } catch (Throwable var7) {
+            throw var7;
+        }
     }
 }

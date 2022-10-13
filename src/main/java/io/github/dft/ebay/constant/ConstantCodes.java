@@ -2,6 +2,7 @@ package io.github.dft.ebay.constant;
 
 public interface ConstantCodes {
     String XML_API_PRODUCTION_GATEWAY = "https://api.ebay.com/ws/api.dll";
+
     String HTTP_HEADER_KEY_X_EBAY_API_IAF_TOKEN = "X-EBAY-API-IAF-TOKEN";
     String HTTP_HEADER_KEY_X_EBAY_API_COMPATIBILITY_LEVEL = "X-EBAY-API-COMPATIBILITY-LEVEL";
     String HTTP_HEADER_KEY_X_EBAY_API_DETAIL_LEVEL = "X-EBAY-API-DETAIL-LEVEL";
@@ -12,6 +13,10 @@ public interface ConstantCodes {
     String HTTP_HEADER_KEY_X_EBAY_API_SITEID = "X-EBAY-API-SITEID";
     String HTTP_HEADER_KEY_CONTENT_TYPE = "Content-Type";
     String HTTP_HEADER_CONTENT_TYPE_VALUE = "text/xml";
+
+    String HTTP_HEADER_KEY_AUTHORIZATION = "Authorization";
+
+    String HTTP_HEADER_CONTENT_TYPE_URLENCODED = "application/x-www-form-urlencoded";
     String HTTP_HEADER_X_EBAY_API_DETAIL_LEVEL_VALUE_RETURN_ALL = "0";
     String EBAY_API_CALL_NAME_FETCH_TOKEN = "FetchToken";
 
@@ -25,4 +30,10 @@ public interface ConstantCodes {
     String EBAY_API_CALL_NAME_REVISE_ITEM = "ReviseItem";
 
     String EBAY_API_CALL_NAME_REVISE_FIXED_PRICE_ITEM = "ReviseFixedPriceItem";
+    String EBAY_PD_SCOPES = "https://api.ebay.com/oauth/api_scope https://api.ebay.com/oauth/api_scope/commerce.identity.readonly https://api.ebay.com/oauth/api_scope/sell.inventory https://api.ebay.com/oauth/api_scope/sell.account https://api.ebay.com/oauth/api_scope/sell.fulfillment ";
+    String EBAY_AUTHORIZED_TOKEN_URL = "https://api.ebay.com/identity/v1/oauth2/token";
+
+    String KEY_NAME_REFRESH_TOKEN = "refresh_token";
+    String KEY_NAME_GRANT_TYPE = "grant_type";
+    String KEY_NAME_SCOPE = "grant_type";
 }
