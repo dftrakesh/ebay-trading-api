@@ -32,4 +32,8 @@ public interface ConstantCodes {
     String EBAY_API_CALL_NAME_REVISE_FIXED_PRICE_ITEM = "ReviseFixedPriceItem";
     String EBAY_PD_SCOPES = "https://api.ebay.com/oauth/api_scope https://api.ebay.com/oauth/api_scope/commerce.identity.readonly https://api.ebay.com/oauth/api_scope/sell.inventory https://api.ebay.com/oauth/api_scope/sell.account https://api.ebay.com/oauth/api_scope/sell.fulfillment ";
     String EBAY_AUTHORIZED_TOKEN_URL = "https://api.ebay.com/identity/v1/oauth2/token";
+
+    String KEY_NAME_REFRESH_TOKEN = "refresh_token";
+    String KEY_NAME_GRANT_TYPE = "grant_type";
+    String KEY_NAME_SCOPE = "grant_type";
 }
