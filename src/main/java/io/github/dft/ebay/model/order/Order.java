@@ -26,7 +26,6 @@ public class    Order implements Serializable {
     private Double total;
 
     @JacksonXmlProperty(localName = "TransactionArray")
-    @JacksonXmlElementWrapper(useWrapping = false)
     private TransactionArray transactionArray;
 
     @JacksonXmlProperty(localName = "ShippingAddress")

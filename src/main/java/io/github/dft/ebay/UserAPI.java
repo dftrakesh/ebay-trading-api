@@ -40,7 +40,7 @@ public class UserAPI extends EbayTradingAPISdk {
                 .build();
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        String strResponse =response.body();
+        String strResponse = response.body();
 
         XmlMapper xmlMapper = new XmlMapper();
         xmlMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
