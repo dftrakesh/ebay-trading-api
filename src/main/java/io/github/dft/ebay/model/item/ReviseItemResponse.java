@@ -13,4 +13,6 @@ public class ReviseItemResponse implements Serializable {
     @JacksonXmlProperty(localName = "Ack")
     private String ack;
 
+    @JacksonXmlProperty(localName = "Message")
+    private String message;
 }

@@ -1,5 +1,6 @@
 package io.github.dft.ebay.model.seller;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,9 +10,9 @@ import lombok.ToString;
 import java.io.Serializable;
 
 @Data
-@ToString
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class ItemType implements Serializable {
 
     @JacksonXmlProperty(localName = "ItemID")
