@@ -10,6 +10,7 @@ import lombok.ToString;
 import java.io.Serializable;
 
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 public class Variation implements Serializable {
 
