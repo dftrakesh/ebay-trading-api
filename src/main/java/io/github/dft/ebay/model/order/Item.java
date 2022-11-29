@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 public class Item {
 
-    @JacksonXmlProperty(localName = "Item")
+    @JacksonXmlProperty(localName = "ItemID")
     private String itemID;
 
     @JacksonXmlProperty(localName = "Title")
