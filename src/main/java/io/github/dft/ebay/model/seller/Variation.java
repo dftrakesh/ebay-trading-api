@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-
 import java.io.Serializable;
 
 @Data
@@ -26,4 +25,6 @@ public class Variation implements Serializable {
     @JacksonXmlProperty(localName = "StartPrice")
     private Double startPrice;
 
+    @JacksonXmlProperty(localName = "VariationSpecifics")
+    private VariationSpecifics variationSpecifics;
 }
