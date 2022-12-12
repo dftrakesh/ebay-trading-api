@@ -6,15 +6,11 @@ import io.github.dft.ebay.model.RequesterCredentials;
 import io.github.dft.ebay.model.item.*;
 import io.github.dft.ebay.model.token.EbayToken;
 import lombok.SneakyThrows;
-import lombok.extern.log4j.Log4j2;
-
 import java.net.URI;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-
 import static io.github.dft.ebay.constant.ConstantCodes.*;
 
-@Log4j2
 public class ItemAPI extends EbayTradingAPISdk {
 
     public ItemAPI(RequesterCredentials requesterCredentials) {
@@ -46,7 +42,6 @@ public class ItemAPI extends EbayTradingAPISdk {
     @SneakyThrows
     public ReviseItemResponse reviseItem(ReviseItemRequest reviseItemRequest) {
         String payload = toStr(reviseItemRequest);
-        log.debug("reviseItem payload: {}", payload);
         reviseItemRequest.setRequesterCredentials(new EbayToken(requesterCredentials.getEBayAuthToken()));
         HttpRequest request = HttpRequest.newBuilder(new URI(XML_API_PRODUCTION_GATEWAY))
                 .header(HTTP_HEADER_KEY_X_EBAY_API_CALL_NAME, EBAY_API_CALL_NAME_REVISE_ITEM)
@@ -62,7 +57,7 @@ public class ItemAPI extends EbayTradingAPISdk {
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
         String strResponse = response.body();
-        log.debug("reviseItem strResponse: {}", strResponse);
+
         return toObj(strResponse, ReviseItemResponse.class);
     }
 
