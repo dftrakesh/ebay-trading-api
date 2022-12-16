@@ -28,9 +28,9 @@ public class Variation implements Serializable {
     @JacksonXmlProperty(localName = "VariationSpecifics")
     private VariationSpecifics variationSpecifics;
 
-    @JacksonXmlProperty(localName = "sellingStatus")
+    @JacksonXmlProperty(localName = "SellingStatus")
     protected SellingStatusType sellingStatus;
 
-    @JacksonXmlProperty(localName = "variationTitle")
+    @JacksonXmlProperty(localName = "VariationTitle")
     protected String variationTitle;
 }
