@@ -1,6 +1,5 @@
 package io.github.dft.ebay.model.order;
 
-
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import io.github.dft.ebay.model.token.EbayToken;
@@ -9,8 +8,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class GetOrdersRequest {
 
@@ -23,4 +22,15 @@ public class GetOrdersRequest {
     @JacksonXmlProperty(localName = "OrderIDArray")
     private OrderRequest orderIDArray;
 
+    @JacksonXmlProperty(localName = "CreateTimeFrom")
+    private String createTimeFrom;
+
+    @JacksonXmlProperty(localName = "CreateTimeTo")
+    private String createTimeTo;
+
+    @JacksonXmlProperty(localName = "OrderStatus")
+    private String orderStatus;
+
+    @JacksonXmlProperty(localName = "Version")
+    private Integer version;
 }
