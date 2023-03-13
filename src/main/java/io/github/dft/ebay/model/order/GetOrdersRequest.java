@@ -28,9 +28,15 @@ public class GetOrdersRequest {
     @JacksonXmlProperty(localName = "CreateTimeTo")
     private String createTimeTo;
 
+    @JacksonXmlProperty(localName = "NumberOfDays")
+    private Integer numberOfDays;
+
     @JacksonXmlProperty(localName = "OrderStatus")
     private String orderStatus;
 
     @JacksonXmlProperty(localName = "Version")
     private Integer version;
+
+    @JacksonXmlProperty(localName = "DetailLevel")
+    public String DetailLevel;
 }

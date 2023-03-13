@@ -26,7 +26,7 @@ public class SellerAPI extends EbayTradingAPISdk {
     }
 
     public GetSellerListResponse getItems(GetSellerListRequest getSellerListRequest) throws URISyntaxException, IOException, InterruptedException {
-        getSellerListRequest.setRequesterCredentials(new EbayToken(requesterCredentials.getEBayAuthToken()));
+        getSellerListRequest.setRequesterCredentials(getEbayToken());
         String payload = toStr(getSellerListRequest);
 
         HttpRequest request = HttpRequest.newBuilder(new URI(XML_API_PRODUCTION_GATEWAY))
@@ -42,9 +42,7 @@ public class SellerAPI extends EbayTradingAPISdk {
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
         String strResponse = response.body();
 
-        XmlMapper xmlMapper = new XmlMapper();
-        xmlMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
-        return xmlMapper.readValue(strResponse, GetSellerListResponse.class);
+        return toObj(strResponse, GetSellerListResponse.class);
     }
 
     public GetSellerListResponse getItems(Calendar startTimeFrom, Calendar startTimeTo, int iPage) throws URISyntaxException, IOException, InterruptedException {

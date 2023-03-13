@@ -26,5 +26,4 @@ public class Transaction implements Serializable {
 
     @JacksonXmlProperty(localName = "Variation")
     private Variation variation;
-
 }

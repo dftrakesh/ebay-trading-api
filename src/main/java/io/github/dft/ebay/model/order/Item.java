@@ -14,5 +14,4 @@ public class Item {
 
     @JacksonXmlProperty(localName = "SKU")
     private String sku;
-
 }

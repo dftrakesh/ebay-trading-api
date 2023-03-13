@@ -25,7 +25,7 @@ public class UserAPI extends EbayTradingAPISdk {
     }
 
     public GetUserResponse getUser(GetUserRequest getUserRequest) throws IOException, InterruptedException, URISyntaxException {
-        getUserRequest.setRequesterCredentials(new EbayToken(requesterCredentials.getEBayAuthToken()));
+        getUserRequest.setRequesterCredentials(getEbayToken());
         String payload = toStr(getUserRequest);
 
         HttpRequest request = HttpRequest.newBuilder(new URI(XML_API_PRODUCTION_GATEWAY))
