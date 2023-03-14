@@ -25,6 +25,8 @@ public interface ConstantCodes {
     String EBAY_API_CALL_NAME_GET_ITEM = "GetItem";
 
     String EBAY_API_CALL_NAME_GET_ORDERS = "GetOrders";
+    String EBAY_API_CALL_NAME_GET_ITEM_TRANSACTIONS = "GetItemTransactions";
+    String EBAY_API_CALL_NAME_GET_ORDER_TRANSACTIONS = "GetOrderTransactions";
     String EBAY_API_CALL_NAME_SET_NOTIFICATION_PREFERENCES = "SetNotificationPreferences";
 
     String EBAY_API_CALL_NAME_REVISE_ITEM = "ReviseItem";
@@ -34,9 +36,14 @@ public interface ConstantCodes {
     String EBAY_API_CALL_NAME_ADD_FIXED_PRICE_ITEM = "AddFixedPriceItem";
 
     String EBAY_PD_SCOPES = "https://api.ebay.com/oauth/api_scope https://api.ebay.com/oauth/api_scope/commerce.identity.readonly https://api.ebay.com/oauth/api_scope/sell.inventory https://api.ebay.com/oauth/api_scope/sell.account https://api.ebay.com/oauth/api_scope/sell.fulfillment ";
+
     String EBAY_AUTHORIZED_TOKEN_URL = "https://api.ebay.com/identity/v1/oauth2/token";
 
     String KEY_NAME_REFRESH_TOKEN = "refresh_token";
+    String KEY_NAME_ACCESS_TOKEN = "authorization_code";
+    String KEY_NAME_ACCESS_REDIRECT_URI = "redirect_uri";
+
     String KEY_NAME_GRANT_TYPE = "grant_type";
-    String KEY_NAME_SCOPE = "grant_type";
+    String KEY_NAME_SCOPE = "scope";
+
 }

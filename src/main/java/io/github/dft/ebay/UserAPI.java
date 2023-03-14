@@ -5,14 +5,12 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.introspect.VisibilityChecker;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import io.github.dft.ebay.model.RequesterCredentials;
-import io.github.dft.ebay.model.token.EbayToken;
 import io.github.dft.ebay.model.user.GetUserRequest;
 import io.github.dft.ebay.model.user.GetUserResponse;
 
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
@@ -25,7 +23,7 @@ public class UserAPI extends EbayTradingAPISdk {
     }
 
     public GetUserResponse getUser(GetUserRequest getUserRequest) throws IOException, InterruptedException, URISyntaxException {
-        getUserRequest.setRequesterCredentials(new EbayToken(requesterCredentials.getEBayAuthToken()));
+        getUserRequest.setRequesterCredentials(getEbayToken());
         String payload = toStr(getUserRequest);
 
         HttpRequest request = HttpRequest.newBuilder(new URI(XML_API_PRODUCTION_GATEWAY))
