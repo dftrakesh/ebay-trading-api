@@ -15,5 +15,4 @@ public class TransactionArray implements Serializable {
     @JacksonXmlProperty(localName = "Transaction")
     @JacksonXmlElementWrapper(useWrapping = false)
     private List<Transaction> transaction;
-
 }

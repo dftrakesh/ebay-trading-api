@@ -7,6 +7,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class EbayToken {
+
     @JacksonXmlProperty(localName = "eBayAuthToken")
     private String eBayAuthToken;
 }
