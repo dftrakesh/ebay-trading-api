@@ -105,7 +105,7 @@ public class ItemType implements Serializable {
     public ProductListingDetails productListingDetails;
 
     @JacksonXmlProperty(localName = "HitCounter")
-    public String HitCounter;
+    public String hitCounter;
 
     @JacksonXmlProperty(localName = "OutOfStockControl")
     public boolean outOfStockControl;

@@ -22,7 +22,7 @@ public class GetItemTransactionsRequest {
     private String itemID;
 
     @JacksonXmlProperty(localName = "RequesterCredentials")
-    private EbayToken RequesterCredentials;
+    private EbayToken requesterCredentials;
 
     @JacksonXmlProperty(localName = "TransactionID")
     private String transactionID;
