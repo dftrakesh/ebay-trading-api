@@ -10,4 +10,7 @@ public class PrimaryCategory {
 
     @JacksonXmlProperty(localName = "CategoryID")
     private String categoryID;
+
+    @JacksonXmlProperty(localName = "CategoryName")
+    private String categoryName;
 }

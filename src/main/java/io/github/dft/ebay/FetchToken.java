@@ -8,9 +8,17 @@ import java.net.URI;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-import static io.github.dft.ebay.constant.ConstantCodes.*;
-
 public class FetchToken extends EbayTradingAPISdk {
+
+    private final String HTTP_HEADER_CONTENT_TYPE_VALUE = "text/xml";
+    private final String HTTP_HEADER_KEY_CONTENT_TYPE = "Content-Type";
+    private final String EBAY_API_CALL_NAME_FETCH_TOKEN = "FetchToken";
+    private final String HTTP_HEADER_KEY_X_EBAY_API_DEV_NAME = "X-EBAY-API-DEV-NAME";
+    private final String HTTP_HEADER_KEY_X_EBAY_API_APP_NAME = "X-EBAY-API-APP-NAME";
+    private final String HTTP_HEADER_KEY_X_EBAY_API_CERT_NAME = "X-EBAY-API-CERT-NAME";
+    private final String HTTP_HEADER_KEY_X_EBAY_API_CALL_NAME = "X-EBAY-API-CALL-NAME";
+    private final String XML_API_PRODUCTION_GATEWAY = "https://api.ebay.com/ws/api.dll";
+    private final String HTTP_HEADER_KEY_X_EBAY_API_COMPATIBILITY_LEVEL = "X-EBAY-API-COMPATIBILITY-LEVEL";
 
     @SneakyThrows
     public FetchToken(RequesterCredentials accessCredentials) {
@@ -34,6 +42,4 @@ public class FetchToken extends EbayTradingAPISdk {
         return client.send(request,
                 HttpResponse.BodyHandlers.ofString()).body();
     }
-
-
 }

@@ -88,4 +88,31 @@ public class ItemType implements Serializable {
 
     @JacksonXmlProperty(localName = "PrimaryCategory")
     private PrimaryCategory primaryCategory;
+
+    @JacksonXmlProperty(localName = "StartPrice")
+    public String startPrice;
+
+    @JacksonXmlProperty(localName = "WatchCount")
+    public String watchCount;
+
+    @JacksonXmlProperty(localName = "Location")
+    public String location;
+
+    @JacksonXmlProperty(localName = "ListingDesigner")
+    public ListingDesigner listingDesigner;
+
+    @JacksonXmlProperty(localName = "ProductListingDetails")
+    public ProductListingDetails productListingDetails;
+
+    @JacksonXmlProperty(localName = "HitCounter")
+    public String HitCounter;
+
+    @JacksonXmlProperty(localName = "OutOfStockControl")
+    public boolean outOfStockControl;
+
+    @JacksonXmlProperty(localName = "TimeLeft")
+    public String timeLeft;
+
+    @JacksonXmlProperty(localName = "UUID")
+    public String uuid;
 }
