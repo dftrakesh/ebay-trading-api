@@ -9,9 +9,6 @@ import lombok.ToString;
 import java.io.Serializable;
 
 @Data
-@ToString
-@AllArgsConstructor
-@NoArgsConstructor
 public class Variation implements Serializable {
 
     @JacksonXmlProperty(localName = "SKU")

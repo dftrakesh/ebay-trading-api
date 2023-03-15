@@ -9,8 +9,6 @@ import lombok.RequiredArgsConstructor;
 
 
 @Data
-@AllArgsConstructor
-@RequiredArgsConstructor
 @JacksonXmlRootElement(localName = "GetItemTransactionsResponse")
 public class GetItemTransactionsResponse {
 

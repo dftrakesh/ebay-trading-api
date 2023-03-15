@@ -1,19 +1,13 @@
 package io.github.dft.ebay.model.seller;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import io.github.dft.ebay.model.order.transactions.ListingDetails;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-@JsonInclude(JsonInclude.Include.NON_EMPTY)
 @JacksonXmlRootElement(localName = "Item")
 public class ItemType implements Serializable {
 
@@ -93,7 +87,7 @@ public class ItemType implements Serializable {
     public String startPrice;
 
     @JacksonXmlProperty(localName = "WatchCount")
-    public String watchCount;
+    public Integer watchCount;
 
     @JacksonXmlProperty(localName = "Location")
     public String location;

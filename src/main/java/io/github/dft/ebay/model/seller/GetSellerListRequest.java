@@ -41,5 +41,5 @@ public class GetSellerListRequest {
     private boolean includeVariations;
 
     @JacksonXmlProperty(localName = "IncludeWatchCount")
-    public String includeWatchCount;
+    public boolean includeWatchCount;
 }
