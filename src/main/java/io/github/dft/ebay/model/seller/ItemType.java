@@ -3,6 +3,7 @@ package io.github.dft.ebay.model.seller;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import io.github.dft.ebay.model.order.transactions.ListingDetails;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -31,8 +32,8 @@ public class ItemType implements Serializable {
     @JacksonXmlProperty(localName = "Quantity")
     private Integer quantity;
 
-    @JacksonXmlProperty(localName = "QuantityAvailable")
-    private Integer quantityAvailable;
+    @JacksonXmlProperty(localName = "QuantityAvailableHint")
+    private Integer quantityAvailableHint;
 
     @JacksonXmlProperty(localName = "SellingStatus")
     private SellingStatusType sellingStatus;
@@ -41,7 +42,7 @@ public class ItemType implements Serializable {
     private String conditionDisplayName;
 
     @JacksonXmlProperty(localName = "ListingDetails")
-    private ListingDetailsType listingDetails;
+    private ListingDetails listingDetails;
 
     @JacksonXmlProperty(localName = "Variations")
     private VariationsType variations;
