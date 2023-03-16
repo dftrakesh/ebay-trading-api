@@ -7,7 +7,6 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-
 public class CurrentPrice implements Serializable {
 
     @JacksonXmlProperty(localName = "currencyID")

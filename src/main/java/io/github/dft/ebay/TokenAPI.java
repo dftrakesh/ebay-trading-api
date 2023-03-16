@@ -1,6 +1,5 @@
 package io.github.dft.ebay;
 
-import io.github.dft.ebay.constant.ConstantCodes;
 import io.github.dft.ebay.model.RequesterCredentials;
 import io.github.dft.ebay.model.handler.JsonBodyHandler;
 import io.github.dft.ebay.model.token.AccessToken;
@@ -14,9 +13,18 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Base64;
 
-import static io.github.dft.ebay.constant.ConstantCodes.*;
-
 public class TokenAPI extends EbayTradingAPISdk {
+
+    private final String KEY_NAME_SCOPE = "scope";
+    private final String KEY_NAME_GRANT_TYPE = "grant_type";
+    private final String KEY_NAME_REFRESH_TOKEN = "refresh_token";
+    private final String KEY_NAME_ACCESS_TOKEN = "authorization_code";
+    private final String KEY_NAME_ACCESS_REDIRECT_URI = "redirect_uri";
+    private final String HTTP_HEADER_KEY_CONTENT_TYPE = "Content-Type";
+    private final String HTTP_HEADER_KEY_AUTHORIZATION = "Authorization";
+    private final String HTTP_HEADER_CONTENT_TYPE_URLENCODED = "application/x-www-form-urlencoded";
+    private final String EBAY_AUTHORIZED_TOKEN_URL = "https://api.ebay.com/identity/v1/oauth2/token";
+    private final String EBAY_PD_SCOPES = "https://api.ebay.com/oauth/api_scope https://api.ebay.com/oauth/api_scope/commerce.identity.readonly https://api.ebay.com/oauth/api_scope/sell.inventory https://api.ebay.com/oauth/api_scope/sell.account https://api.ebay.com/oauth/api_scope/sell.fulfillment ";
 
     public TokenAPI() {
         super(new RequesterCredentials());
@@ -42,11 +50,11 @@ public class TokenAPI extends EbayTradingAPISdk {
     public AccessToken getAccessTokenFromRefreshToken(AccessTokenRequest accessTokenRequest) {
 
         String requestData = KEY_NAME_GRANT_TYPE + "=" + KEY_NAME_REFRESH_TOKEN + "&" +
-                String.format(KEY_NAME_SCOPE + "=%s", ConstantCodes.EBAY_PD_SCOPES) + "&" +
+                String.format(KEY_NAME_SCOPE + "=%s", EBAY_PD_SCOPES) + "&" +
                 String.format(KEY_NAME_REFRESH_TOKEN + "=%s", accessTokenRequest.getRefreshToken());
 
         HttpRequest request = HttpRequest.newBuilder(new URI(EBAY_AUTHORIZED_TOKEN_URL))
-                .header(HTTP_HEADER_KEY_AUTHORIZATION, buildAuthorization(accessTokenRequest.getAppId(),accessTokenRequest.getCertId()))
+                .header(HTTP_HEADER_KEY_AUTHORIZATION, buildAuthorization(accessTokenRequest.getAppId(), accessTokenRequest.getCertId()))
                 .header(HTTP_HEADER_KEY_CONTENT_TYPE, HTTP_HEADER_CONTENT_TYPE_URLENCODED)
                 .POST(HttpRequest.BodyPublishers.ofString(requestData))
                 .build();
@@ -58,7 +66,7 @@ public class TokenAPI extends EbayTradingAPISdk {
         }
     }
 
-    private String buildAuthorization(String appID,String certID) {
+    private String buildAuthorization(String appID, String certID) {
         byte[] encodeBytes = Base64.getEncoder().encode((appID + ":" + certID).getBytes());
         return "Basic " + new String(encodeBytes);
     }

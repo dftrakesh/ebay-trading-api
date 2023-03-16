@@ -1,0 +1,14 @@
+package io.github.dft.ebay.model.seller;
+
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import lombok.Data;
+
+@Data
+public class ProductListingDetails {
+
+    @JacksonXmlProperty(localName = "BrandMPN")
+    private BrandMPN brandMPN;
+
+    @JacksonXmlProperty(localName = "IncludeeBayProductDetails")
+    private boolean includeeBayProductDetails;
+}

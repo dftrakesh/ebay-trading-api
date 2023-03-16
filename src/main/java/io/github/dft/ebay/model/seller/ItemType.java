@@ -1,18 +1,13 @@
 package io.github.dft.ebay.model.seller;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
-import lombok.AllArgsConstructor;
+import io.github.dft.ebay.model.order.transactions.ListingDetails;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-@JsonInclude(JsonInclude.Include.NON_EMPTY)
 @JacksonXmlRootElement(localName = "Item")
 public class ItemType implements Serializable {
 
@@ -31,8 +26,8 @@ public class ItemType implements Serializable {
     @JacksonXmlProperty(localName = "Quantity")
     private Integer quantity;
 
-    @JacksonXmlProperty(localName = "QuantityAvailable")
-    private Integer quantityAvailable;
+    @JacksonXmlProperty(localName = "QuantityAvailableHint")
+    private Integer quantityAvailableHint;
 
     @JacksonXmlProperty(localName = "SellingStatus")
     private SellingStatusType sellingStatus;
@@ -41,7 +36,7 @@ public class ItemType implements Serializable {
     private String conditionDisplayName;
 
     @JacksonXmlProperty(localName = "ListingDetails")
-    private ListingDetailsType listingDetails;
+    private ListingDetails listingDetails;
 
     @JacksonXmlProperty(localName = "Variations")
     private VariationsType variations;
@@ -87,4 +82,31 @@ public class ItemType implements Serializable {
 
     @JacksonXmlProperty(localName = "PrimaryCategory")
     private PrimaryCategory primaryCategory;
+
+    @JacksonXmlProperty(localName = "StartPrice")
+    public String startPrice;
+
+    @JacksonXmlProperty(localName = "WatchCount")
+    public Integer watchCount;
+
+    @JacksonXmlProperty(localName = "Location")
+    public String location;
+
+    @JacksonXmlProperty(localName = "ListingDesigner")
+    public ListingDesigner listingDesigner;
+
+    @JacksonXmlProperty(localName = "ProductListingDetails")
+    public ProductListingDetails productListingDetails;
+
+    @JacksonXmlProperty(localName = "HitCounter")
+    public String hitCounter;
+
+    @JacksonXmlProperty(localName = "OutOfStockControl")
+    public boolean outOfStockControl;
+
+    @JacksonXmlProperty(localName = "TimeLeft")
+    public String timeLeft;
+
+    @JacksonXmlProperty(localName = "UUID")
+    public String uuid;
 }

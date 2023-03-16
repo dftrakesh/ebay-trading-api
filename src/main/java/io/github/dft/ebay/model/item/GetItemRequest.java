@@ -17,7 +17,7 @@ public class GetItemRequest {
     private String itemID;
 
     @JacksonXmlProperty(localName = "RequesterCredentials")
-    private EbayToken RequesterCredentials;
+    private EbayToken requesterCredentials;
 
     public GetItemRequest(String itemID) {
         this.itemID = itemID;

@@ -17,7 +17,7 @@ public class GetOrdersRequest {
     private final String xmlns = "urn:ebay:apis:eBLBaseComponents";
 
     @JacksonXmlProperty(localName = "RequesterCredentials")
-    private EbayToken RequesterCredentials;
+    private EbayToken requesterCredentials;
 
     @JacksonXmlProperty(localName = "OrderIDArray")
     private OrderRequest orderIDArray;
@@ -38,5 +38,5 @@ public class GetOrdersRequest {
     private Integer version;
 
     @JacksonXmlProperty(localName = "DetailLevel")
-    public String DetailLevel;
+    public String detailLevel;
 }

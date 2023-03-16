@@ -8,7 +8,6 @@ import java.io.Serializable;
 @Data
 public class SellingStatus implements Serializable {
 
-
     @JacksonXmlProperty(localName = "ConvertedCurrentPrice")
     public Double convertedCurrentPrice;
 

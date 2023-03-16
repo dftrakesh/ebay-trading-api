@@ -26,5 +26,5 @@ public class GetUserRequest {
     private Boolean includeFeatureEligibility;
 
     @JacksonXmlProperty(localName = "RequesterCredentials")
-    private EbayToken RequesterCredentials;
+    private EbayToken requesterCredentials;
 }

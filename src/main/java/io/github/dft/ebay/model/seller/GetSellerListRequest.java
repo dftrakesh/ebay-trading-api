@@ -16,6 +16,12 @@ public class GetSellerListRequest {
     @JacksonXmlProperty(isAttribute = true)
     private final String xmlns = "urn:ebay:apis:eBLBaseComponents";
 
+    @JacksonXmlProperty(localName = "StartTimeFrom")
+    public String startTimeFrom;
+
+    @JacksonXmlProperty(localName = "StartTimeTo")
+    public String startTimeTo;
+
     @JacksonXmlProperty(localName = "EndTimeFrom")
     private String endTimeFrom;
 
@@ -29,9 +35,11 @@ public class GetSellerListRequest {
     private String granularityLevel;
 
     @JacksonXmlProperty(localName = "RequesterCredentials")
-    private EbayToken RequesterCredentials;
+    private EbayToken requesterCredentials;
 
     @JacksonXmlProperty(localName = "IncludeVariations")
     private boolean includeVariations;
 
+    @JacksonXmlProperty(localName = "IncludeWatchCount")
+    public boolean includeWatchCount;
 }
