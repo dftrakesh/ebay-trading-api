@@ -8,8 +8,8 @@ import lombok.Data;
 public class TotalTaxAmount {
 
     @JacksonXmlProperty(localName = "currencyID")
-    public String currencyID;
+    private String currencyID;
 
     @JacksonXmlText
-    public Double text;
+    private Double text;
 }

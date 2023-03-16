@@ -7,8 +7,8 @@ import lombok.Data;
 public class Program {
 
     @JacksonXmlProperty(localName = "AuthenticityVerification")
-    public AuthenticityVerification authenticityVerification;
+    private AuthenticityVerification authenticityVerification;
 
     @JacksonXmlProperty(localName = "Fulfillment")
-    public Fulfillment fulfillment;
+    private Fulfillment fulfillment;
 }

@@ -9,6 +9,6 @@ import java.io.Serializable;
 public class Payments implements Serializable {
 
     @JacksonXmlProperty(localName = "Payment")
-    public Payment payment;
+    private Payment payment;
 }
 

@@ -11,14 +11,14 @@ import java.io.Serializable;
 public class ListingDetails implements Serializable {
 
     @JacksonXmlProperty(localName = "StartTime")
-    public String startTime;
+    private String startTime;
 
     @JacksonXmlProperty(localName = "EndTime")
-    public String endTime;
+    private String endTime;
 
     @JacksonXmlProperty(localName = "ViewItemURL")
-    public String viewItemURL;
+    private String viewItemURL;
 
     @JacksonXmlProperty(localName = "ViewItemURLForNaturalSearch")
-    public String viewItemURLForNaturalSearch;
+    private String viewItemURLForNaturalSearch;
 }

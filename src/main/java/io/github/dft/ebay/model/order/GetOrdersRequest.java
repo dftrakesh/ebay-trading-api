@@ -38,5 +38,5 @@ public class GetOrdersRequest {
     private Integer version;
 
     @JacksonXmlProperty(localName = "DetailLevel")
-    public String detailLevel;
+    private String detailLevel;
 }

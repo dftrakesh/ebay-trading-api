@@ -14,5 +14,5 @@ public class OrderArray implements Serializable {
 
     @JacksonXmlProperty(localName = "Order")
     @JacksonXmlElementWrapper(useWrapping = false)
-    protected List<Order> order;
+    private List<Order> order;
 }

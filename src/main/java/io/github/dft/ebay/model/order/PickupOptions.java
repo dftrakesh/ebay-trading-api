@@ -7,8 +7,8 @@ import lombok.Data;
 public class PickupOptions {
 
     @JacksonXmlProperty(localName = "PickupMethod")
-    public String pickupMethod;
+    private String pickupMethod;
 
     @JacksonXmlProperty(localName = "PickupPriority")
-    public String pickupPriority;
+    private String pickupPriority;
 }

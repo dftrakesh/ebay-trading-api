@@ -7,20 +7,20 @@ import lombok.Data;
 public class InternationalShippingServiceOption {
 
     @JacksonXmlProperty(localName = "ImportCharge")
-    public String importCharge;
+    private String importCharge;
 
     @JacksonXmlProperty(localName = "ShippingService")
-    public String shippingService;
+    private String shippingService;
 
     @JacksonXmlProperty(localName = "ShippingServiceAdditionalCost")
-    public String shippingServiceAdditionalCost;
+    private String shippingServiceAdditionalCost;
 
     @JacksonXmlProperty(localName = "ShippingServiceCost")
-    public String shippingServiceCost;
+    private String shippingServiceCost;
 
     @JacksonXmlProperty(localName = "ShippingServicePriority")
-    public String shippingServicePriority;
+    private String shippingServicePriority;
 
     @JacksonXmlProperty(localName = "ShipToLocation")
-    public String shipToLocation;
+    private String shipToLocation;
 }

@@ -7,14 +7,14 @@ import lombok.Data;
 public class SellerDiscount {
 
     @JacksonXmlProperty(localName = "CampaignDisplayName")
-    public String campaignDisplayName;
+    private String campaignDisplayName;
 
     @JacksonXmlProperty(localName = "CampaignID")
-    public String campaignID;
+    private String campaignID;
 
     @JacksonXmlProperty(localName = "ItemDiscountAmount")
-    public String itemDiscountAmount;
+    private String itemDiscountAmount;
 
     @JacksonXmlProperty(localName = "ShippingDiscountAmount")
-    public String shippingDiscountAmount;
+    private String shippingDiscountAmount;
 }

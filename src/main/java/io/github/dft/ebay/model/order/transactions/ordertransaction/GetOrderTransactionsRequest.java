@@ -18,14 +18,14 @@ public class GetOrderTransactionsRequest {
     private EbayToken requesterCredentials;
 
     @JacksonXmlProperty(localName = "IncludeFinalValueFees")
-    public boolean includeFinalValueFees;
+    private boolean includeFinalValueFees;
 
     @JacksonXmlProperty(localName = "ItemTransactionIDArray")
-    public ItemTransactionIDArray itemTransactionIDArray;
+    private ItemTransactionIDArray itemTransactionIDArray;
 
     @JacksonXmlProperty(localName = "OrderIDArray")
-    public OrderIDArray orderIDArray;
+    private OrderIDArray orderIDArray;
 
     @JacksonXmlProperty(localName = "DetailLevel")
-    public String detailLevel;
+    private String detailLevel;
 }

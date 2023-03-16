@@ -7,11 +7,11 @@ import lombok.Data;
 public class PackageLength {
 
     @JacksonXmlProperty(localName = "measurementSystem")
-    public String measurementSystem;
+    private String measurementSystem;
 
     @JacksonXmlProperty(localName = "unit")
-    public String unit;
+    private String unit;
 
     @JacksonXmlProperty(localName = "text")
-    public Integer text;
+    private Integer text;
 }

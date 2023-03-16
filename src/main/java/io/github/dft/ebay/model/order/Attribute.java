@@ -8,8 +8,8 @@ import lombok.Data;
 public class Attribute {
 
     @JacksonXmlProperty(localName = "name")
-    public String name;
+    private String name;
 
     @JacksonXmlText
-    public String text;
+    private String text;
 }

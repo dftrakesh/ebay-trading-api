@@ -15,106 +15,106 @@ public class Order {
     private String orderID;
 
     @JacksonXmlProperty(localName = "AdjustmentAmount")
-    public String adjustmentAmount;
+    private String adjustmentAmount;
 
     @JacksonXmlProperty(localName = "AmountPaid")
-    public String amountPaid;
+    private String amountPaid;
 
     @JacksonXmlProperty(localName = "AmountSaved")
-    public String amountSaved;
+    private String amountSaved;
 
     @JacksonXmlProperty(localName = "BuyerUserID")
-    public String buyerUserID;
+    private String buyerUserID;
 
     @JacksonXmlProperty(localName = "BuyerCheckoutMessage")
-    public String buyerCheckoutMessage;
+    private String buyerCheckoutMessage;
 
     @JacksonXmlProperty(localName = "BuyerPackageEnclosures")
-    public BuyerPackageEnclosures buyerPackageEnclosures;
+    private BuyerPackageEnclosures buyerPackageEnclosures;
 
     @JacksonXmlProperty(localName = "BuyerTaxIdentifier")
-    public BuyerTaxIdentifier buyerTaxIdentifier;
+    private BuyerTaxIdentifier buyerTaxIdentifier;
 
     @JacksonXmlProperty(localName = "CancelStatus")
-    public String cancelStatus;
+    private String cancelStatus;
 
     @JacksonXmlProperty(localName = "CancelReason")
-    public String cancelReason;
+    private String cancelReason;
 
     @JacksonXmlProperty(localName = "CheckoutStatus")
-    public CheckoutStatus checkoutStatus;
+    private CheckoutStatus checkoutStatus;
 
     @JacksonXmlProperty(localName = "ContainseBayPlusTransaction")
-    public boolean containseBayPlusTransaction;
+    private boolean containseBayPlusTransaction;
 
     @JacksonXmlProperty(localName = "CreatingUserRole")
-    public String creatingUserRole;
+    private String creatingUserRole;
 
     @JacksonXmlProperty(localName = "eBayCollectAndRemitTax")
-    public boolean eBayCollectAndRemitTax;
+    private boolean eBayCollectAndRemitTax;
 
     @JacksonXmlProperty(localName = "CreatedTime")
     private String createdTime;
 
     @JacksonXmlProperty(localName = "ExtendedOrderID")
-    public String extendedOrderID;
+    private String extendedOrderID;
 
     @JacksonXmlProperty(localName = "IntegratedMerchantCreditCardEnabled")
-    public boolean integratedMerchantCreditCardEnabled;
+    private boolean integratedMerchantCreditCardEnabled;
 
     @JacksonXmlProperty(localName = "MonetaryDetails")
-    public MonetaryDetails monetaryDetails;
+    private MonetaryDetails monetaryDetails;
 
     @JacksonXmlProperty(localName = "IsMultiLegShipping")
-    public boolean isMultiLegShipping;
+    private boolean isMultiLegShipping;
 
     @JacksonXmlProperty(localName = "OrderStatus")
     private String orderStatus;
 
     @JacksonXmlProperty(localName = "PaidTime")
-    public String paidTime;
+    private String paidTime;
 
     @JacksonXmlProperty(localName = "MultiLegShippingDetails")
-    public MultiLegShippingDetails multiLegShippingDetails;
+    private MultiLegShippingDetails multiLegShippingDetails;
 
     @JacksonXmlProperty(localName = "PaymentHoldDetails")
-    public PaymentHoldDetails paymentHoldDetails;
+    private PaymentHoldDetails paymentHoldDetails;
 
     @JacksonXmlProperty(localName = "PickupDetails")
-    public PickupDetails pickupDetails;
+    private PickupDetails pickupDetails;
 
     @JacksonXmlProperty(localName = "PickupMethodSelected")
-    public PickupMethodSelected pickupMethodSelected;
+    private PickupMethodSelected pickupMethodSelected;
 
     @JacksonXmlProperty(localName = "PaymentMethods")
-    public String paymentMethods;
+    private String paymentMethods;
 
     @JacksonXmlProperty(localName = "LogisticsPlanType")
-    public String logisticsPlanType;
+    private String logisticsPlanType;
 
     @JacksonXmlProperty(localName = "PaymentHoldStatus")
-    public String paymentHoldStatus;
+    private String paymentHoldStatus;
 
     @JacksonXmlProperty(localName = "SellerUserID")
-    public String sellerUserID;
+    private String sellerUserID;
 
     @JacksonXmlProperty(localName = "SellerEmail")
-    public String sellerEmail;
+    private String sellerEmail;
 
     @JacksonXmlProperty(localName = "ShippedTime")
-    public String shippedTime;
+    private String shippedTime;
 
     @JacksonXmlProperty(localName = "ShippingAddress")
     private ShippingAddress shippingAddress;
 
     @JacksonXmlProperty(localName = "ShippingDetails")
-    public ShippingDetails shippingDetails;
+    private ShippingDetails shippingDetails;
 
     @JacksonXmlProperty(localName = "ShippingServiceSelected")
-    public ShippingServiceSelected shippingServiceSelected;
+    private ShippingServiceSelected shippingServiceSelected;
 
     @JacksonXmlProperty(localName = "Subtotal")
-    public String subtotal;
+    private String subtotal;
 
     @JacksonXmlProperty(localName = "Total")
     private Double total;

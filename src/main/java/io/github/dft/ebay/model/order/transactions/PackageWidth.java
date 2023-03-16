@@ -8,11 +8,11 @@ import lombok.Data;
 public class PackageWidth {
 
     @JacksonXmlProperty(localName = "measurementSystem")
-    public String measurementSystem;
+    private String measurementSystem;
 
     @JacksonXmlProperty(localName = "unit")
-    public String unit;
+    private String unit;
     
     @JacksonXmlText
-    public Integer text;
+    private Integer text;
 }

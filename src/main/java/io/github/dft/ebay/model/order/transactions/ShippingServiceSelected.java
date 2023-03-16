@@ -9,23 +9,23 @@ import java.io.Serializable;
 public class ShippingServiceSelected implements Serializable {
 
     @JacksonXmlProperty(localName = "ExpeditedService")
-    public String expeditedService;
+    private String expeditedService;
 
     @JacksonXmlProperty(localName = "ImportCharge")
-    public String importCharge;
+    private String importCharge;
 
     @JacksonXmlProperty(localName = "ShippingService")
-    public String shippingService;
+    private String shippingService;
 
     @JacksonXmlProperty(localName = "ShippingServiceCost")
-    public String shippingServiceCost;
+    private String shippingServiceCost;
 
     @JacksonXmlProperty(localName = "ShippingPackageInfo")
-    public ShippingPackageInfo shippingPackageInfo;
+    private ShippingPackageInfo shippingPackageInfo;
 
     @JacksonXmlProperty(localName = "ShippingServiceAdditionalCost")
-    public String shippingServiceAdditionalCost;
+    private String shippingServiceAdditionalCost;
 
     @JacksonXmlProperty(localName = "ShippingServicePriority")
-    public String shippingServicePriority;
+    private String shippingServicePriority;
 }

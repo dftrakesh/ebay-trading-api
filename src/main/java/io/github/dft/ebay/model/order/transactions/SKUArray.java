@@ -10,5 +10,5 @@ import java.util.List;
 public class SKUArray implements Serializable {
 
     @JacksonXmlProperty(localName = "SKU")
-    public List<String> sku;
+    private List<String> sku;
 }

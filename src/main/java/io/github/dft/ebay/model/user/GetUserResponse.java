@@ -12,11 +12,9 @@ import java.io.Serializable;
 public class GetUserResponse implements Serializable {
 
     @JacksonXmlProperty(localName = "Ack")
-    @JsonProperty("Ack")
     private String ack;
 
     @JacksonXmlProperty(localName = "User")
-    @JsonProperty("User")
     private User user;
 
 }

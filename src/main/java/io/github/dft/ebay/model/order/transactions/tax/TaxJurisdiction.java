@@ -7,11 +7,11 @@ import lombok.Data;
 public class TaxJurisdiction {
 
     @JacksonXmlProperty(localName = "JurisdictionID")
-    public String jurisdictionID;
+    private String jurisdictionID;
 
     @JacksonXmlProperty(localName = "SalesTaxPercent")
-    public Double salesTaxPercent;
+    private Double salesTaxPercent;
 
     @JacksonXmlProperty(localName = "ShippingIncludedInTax")
-    public boolean shippingIncludedInTax;
+    private boolean shippingIncludedInTax;
 }

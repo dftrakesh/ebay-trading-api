@@ -5,5 +5,5 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 public class PickupDetails {
 
     @JacksonXmlProperty(localName = "PickupOptions")
-    public PickupOptions pickupOptions;
+    private PickupOptions pickupOptions;
 }

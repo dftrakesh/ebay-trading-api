@@ -7,5 +7,5 @@ import lombok.Data;
 public class BuyerPackageEnclosures {
 
     @JacksonXmlProperty(localName = "BuyerPackageEnclosure")
-    public BuyerPackageEnclosure buyerPackageEnclosure;
+    private BuyerPackageEnclosure buyerPackageEnclosure;
 }

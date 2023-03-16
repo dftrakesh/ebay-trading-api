@@ -9,24 +9,24 @@ import lombok.Data;
 public class TaxDetails {
 
     @JacksonXmlProperty(localName = "Imposition")
-    public String imposition;
+    private String imposition;
 
     @JacksonXmlProperty(localName = "TaxDescription")
-    public String taxDescription;
+    private String taxDescription;
 
     @JacksonXmlProperty(localName = "TaxAmount")
-    public TaxAmount taxAmount;
+    private TaxAmount taxAmount;
 
     @JacksonXmlProperty(localName = "TaxCode")
-    public String taxCode;
+    private String taxCode;
 
     @JacksonXmlProperty(localName = "TaxOnSubtotalAmount")
-    public TaxOnSubtotalAmount taxOnSubtotalAmount;
+    private TaxOnSubtotalAmount taxOnSubtotalAmount;
 
     @JacksonXmlProperty(localName = "TaxOnShippingAmount")
-    public TaxOnShippingAmount taxOnShippingAmount;
+    private TaxOnShippingAmount taxOnShippingAmount;
 
     @JacksonXmlProperty(localName = "TaxOnHandlingAmount")
-    public TaxOnHandlingAmount taxOnHandlingAmount;
+    private TaxOnHandlingAmount taxOnHandlingAmount;
 }
 

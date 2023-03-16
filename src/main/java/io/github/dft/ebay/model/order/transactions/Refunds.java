@@ -7,5 +7,5 @@ import lombok.Data;
 public class Refunds {
 
     @JacksonXmlProperty(localName = "Refund")
-    public Refund refund;
+    private Refund refund;
 }

@@ -9,8 +9,8 @@ import lombok.Data;
 public class Taxes {
 
     @JacksonXmlProperty(localName = "TotalTaxAmount")
-    public TotalTaxAmount totalTaxAmount;
+    private TotalTaxAmount totalTaxAmount;
 
     @JacksonXmlProperty(localName = "TaxDetails")
-    public TaxDetails taxDetails;
+    private TaxDetails taxDetails;
 }

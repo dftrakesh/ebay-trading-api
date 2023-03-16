@@ -9,62 +9,62 @@ import java.io.Serializable;
 public class Buyer implements Serializable {
 
     @JacksonXmlProperty(localName = "AboutMePage")
-    public boolean aboutMePage;
+    private boolean aboutMePage;
 
     @JacksonXmlProperty(localName = "BuyerInfo")
-    public BuyerInfo buyerInfo;
+    private BuyerInfo buyerInfo;
 
     @JacksonXmlProperty(localName = "EIASToken")
-    public String eIASToken;
+    private String eIASToken;
 
     @JacksonXmlProperty(localName = "Email")
-    public String email;
+    private String email;
 
     @JacksonXmlProperty(localName = "FeedbackScore")
-    public Integer feedbackScore;
+    private Integer feedbackScore;
 
     @JacksonXmlProperty(localName = "PositiveFeedbackPercent")
-    public double positiveFeedbackPercent;
+    private double positiveFeedbackPercent;
 
     @JacksonXmlProperty(localName = "FeedbackPrivate")
-    public boolean feedbackPrivate;
+    private boolean feedbackPrivate;
 
     @JacksonXmlProperty(localName = "IDVerified")
-    public boolean iDVerified;
+    private boolean iDVerified;
 
     @JacksonXmlProperty(localName = "eBayGoodStanding")
-    public boolean eBayGoodStanding;
+    private boolean eBayGoodStanding;
 
     @JacksonXmlProperty(localName = "NewUser")
-    public boolean newUser;
+    private boolean newUser;
 
     @JacksonXmlProperty(localName = "RegistrationDate")
-    public String registrationDate;
+    private String registrationDate;
 
     @JacksonXmlProperty(localName = "Site")
-    public String site;
+    private String site;
 
     @JacksonXmlProperty(localName = "Status")
-    public String status;
+    private String status;
 
     @JacksonXmlProperty(localName = "UserID")
-    public String userID;
+    private String userID;
 
     @JacksonXmlProperty(localName = "UserIDChanged")
-    public boolean userIDChanged;
+    private boolean userIDChanged;
 
     @JacksonXmlProperty(localName = "UserIDLastChanged")
-    public String userIDLastChanged;
+    private String userIDLastChanged;
 
     @JacksonXmlProperty(localName = "VATStatus")
-    public String vATStatus;
+    private String vATStatus;
 
     @JacksonXmlProperty(localName = "StaticAlias")
-    public String staticAlias;
+    private String staticAlias;
 
     @JacksonXmlProperty(localName = "UserFirstName")
-    public String userFirstName;
+    private String userFirstName;
 
     @JacksonXmlProperty(localName = "UserLastName")
-    public String userLastName;
+    private String userLastName;
 }

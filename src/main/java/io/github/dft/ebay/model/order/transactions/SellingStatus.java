@@ -9,14 +9,14 @@ import java.io.Serializable;
 public class SellingStatus implements Serializable {
 
     @JacksonXmlProperty(localName = "ConvertedCurrentPrice")
-    public Double convertedCurrentPrice;
+    private Double convertedCurrentPrice;
 
     @JacksonXmlProperty(localName = "CurrentPrice")
-    public Double currentPrice;
+    private Double currentPrice;
 
     @JacksonXmlProperty(localName = "FinalValueFee")
-    public String finalValueFee;
+    private String finalValueFee;
 
     @JacksonXmlProperty(localName = "ListingStatus")
-    public String listingStatus;
+    private String listingStatus;
 }

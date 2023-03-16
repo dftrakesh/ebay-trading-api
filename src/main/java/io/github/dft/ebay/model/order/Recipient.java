@@ -7,8 +7,8 @@ import lombok.Data;
 public class Recipient {
 
     @JacksonXmlProperty(localName = "Email")
-    public String email;
+    private String email;
 
     @JacksonXmlProperty(localName = "Name")
-    public String name;
+    private String name;
 }

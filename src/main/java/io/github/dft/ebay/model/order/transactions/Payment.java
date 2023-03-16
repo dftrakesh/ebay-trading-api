@@ -9,23 +9,23 @@ import java.io.Serializable;
 public class Payment implements Serializable {
 
     @JacksonXmlProperty(localName = "PaymentStatus")
-    public String paymentStatus;
+    private String paymentStatus;
 
     @JacksonXmlProperty(localName = "Payer")
-    public Payer payer;
+    private Payer payer;
 
     @JacksonXmlProperty(localName = "Payee")
-    public Payee payee;
+    private Payee payee;
 
     @JacksonXmlProperty(localName = "PaymentTime")
-    public String paymentTime;
+    private String paymentTime;
 
     @JacksonXmlProperty(localName = "PaymentAmount")
-    public String paymentAmount;
+    private String paymentAmount;
 
     @JacksonXmlProperty(localName = "ReferenceID")
-    public ReferenceID referenceID;
+    private ReferenceID referenceID;
 
     @JacksonXmlProperty(localName = "FeeOrCreditAmount")
-    public String feeOrCreditAmount;
+    private String feeOrCreditAmount;
 }

@@ -7,8 +7,8 @@ import lombok.Data;
 public class ServiceCost {
 
     @JacksonXmlProperty(localName = "Amount")
-    public String amount;
+    private String amount;
 
     @JacksonXmlProperty(localName = "ConvertedFromAmount")
-    public String convertedFromAmount;
+    private String convertedFromAmount;
 }

@@ -19,56 +19,56 @@ public class Item {
     private String sku;
 
     @JacksonXmlProperty(localName = "ApplicationData")
-    public String applicationData;
+    private String applicationData;
 
     @JacksonXmlProperty(localName = "AutoPay")
-    public String autoPay;
+    private String autoPay;
 
     @JacksonXmlProperty(localName = "BuyerProtection")
-    public String buyerProtection;
+    private String buyerProtection;
 
     @JacksonXmlProperty(localName = "BuyItNowPrice")
-    public String buyItNowPrice;
+    private String buyItNowPrice;
 
     @JacksonXmlProperty(localName = "IntegratedMerchantCreditCardEnabled")
-    public String integratedMerchantCreditCardEnabled;
+    private String integratedMerchantCreditCardEnabled;
 
     @JacksonXmlProperty(localName = "ListingType")
-    public String listingType;
+    private String listingType;
 
     @JacksonXmlProperty(localName = "PrivateListing")
-    public String privateListing;
+    private String privateListing;
 
     @JacksonXmlProperty(localName = "SellingStatus")
-    public SellingStatus sellingStatus;
+    private SellingStatus sellingStatus;
 
     @JacksonXmlProperty(localName = "Currency")
-    public String currency;
+    private String currency;
 
     @JacksonXmlProperty(localName = "InventoryTrackingMethod")
-    public String inventoryTrackingMethod;
+    private String inventoryTrackingMethod;
 
     @JacksonXmlProperty(localName = "ListingDetails")
-    public ListingDetails listingDetails;
+    private ListingDetails listingDetails;
 ;
     @JacksonXmlProperty(localName = "LotSize")
-    public String lotSize;
+    private String lotSize;
 
     @JacksonXmlProperty(localName = "PaymentMethods")
-    public String paymentMethods;
+    private String paymentMethods;
 
     @JacksonXmlProperty(localName = "Quantity")
-    public String quantity;
+    private String quantity;
 
     @JacksonXmlProperty(localName = "Seller")
-    public Seller seller;
+    private Seller seller;
 
     @JacksonXmlProperty(localName = "Site")
-    public String site;
+    private String site;
 
     @JacksonXmlProperty(localName = "StartPrice")
-    public String startPrice;
+    private String startPrice;
 
     @JacksonXmlProperty(localName = "Variations")
-    public Variations variations;
+    private Variations variations;
 }

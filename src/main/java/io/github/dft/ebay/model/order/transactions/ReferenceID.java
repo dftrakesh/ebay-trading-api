@@ -10,8 +10,8 @@ import java.io.Serializable;
 public class ReferenceID implements Serializable {
 
     @JacksonXmlProperty(localName = "type",isAttribute = true)
-    public String type;
+    private String type;
 
     @JacksonXmlText
-    public String text;
+    private String text;
 }

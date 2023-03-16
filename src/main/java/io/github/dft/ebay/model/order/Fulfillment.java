@@ -8,9 +8,9 @@ import lombok.Data;
 public class Fulfillment {
 
     @JacksonXmlProperty(localName = "FulfillmentBy")
-    public String fulfillmentBy;
+    private String fulfillmentBy;
 
     @JacksonXmlProperty(localName = "FulfillmentRefId")
-    public String fulfillmentRefId;
+    private String fulfillmentRefId;
 }
 

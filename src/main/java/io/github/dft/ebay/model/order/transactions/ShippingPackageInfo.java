@@ -9,17 +9,17 @@ import java.io.Serializable;
 public class ShippingPackageInfo implements Serializable {
 
     @JacksonXmlProperty(localName = "ActualDeliveryTime")
-    public String actualDeliveryTime;
+    private String actualDeliveryTime;
 
     @JacksonXmlProperty(localName = "ScheduledDeliveryTimeMax")
-    public String scheduledDeliveryTimeMax;
+    private String scheduledDeliveryTimeMax;
 
     @JacksonXmlProperty(localName = "ScheduledDeliveryTimeMin")
-    public String scheduledDeliveryTimeMin;
+    private String scheduledDeliveryTimeMin;
 
     @JacksonXmlProperty(localName = "ShippingTrackingEvent")
-    public String shippingTrackingEvent;
+    private String shippingTrackingEvent;
 
     @JacksonXmlProperty(localName = "StoreID")
-    public String storeID;
+    private String storeID;
 }

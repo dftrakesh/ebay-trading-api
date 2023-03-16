@@ -7,17 +7,17 @@ import lombok.Data;
 public class Buyer {
 
     @JacksonXmlProperty(localName = "BuyerInfo")
-    public BuyerInfo buyerInfo;
+    private BuyerInfo buyerInfo;
 
     @JacksonXmlProperty(localName = "Email")
-    public String email;
+    private String email;
 
     @JacksonXmlProperty(localName = "StaticAlias")
-    public String staticAlias;
+    private String staticAlias;
 
     @JacksonXmlProperty(localName = "UserFirstName")
-    public String userFirstName;
+    private String userFirstName;
 
     @JacksonXmlProperty(localName = "UserLastName")
-    public String userLastName;
+    private String userLastName;
 }

@@ -7,23 +7,23 @@ import lombok.Data;
 public class ShippingServiceOptions {
 
     @JacksonXmlProperty(localName = "ShippingService")
-    public String shippingService;
+    private String shippingService;
 
     @JacksonXmlProperty(localName = "ImportCharge")
-    public String importCharge;
+    private String importCharge;
 
     @JacksonXmlProperty(localName = "ShippingPackageInfo")
-    public ShippingPackageInfo shippingPackageInfo;
+    private ShippingPackageInfo shippingPackageInfo;
 
     @JacksonXmlProperty(localName = "ShippingServicePriority")
-    public Integer shippingServicePriority;
+    private Integer shippingServicePriority;
 
     @JacksonXmlProperty(localName = "ExpeditedService")
-    public boolean expeditedService;
+    private boolean expeditedService;
 
     @JacksonXmlProperty(localName = "ShippingTimeMin")
-    public Integer shippingTimeMin;
+    private Integer shippingTimeMin;
 
     @JacksonXmlProperty(localName = "ShippingTimeMax")
-    public Integer shippingTimeMax;
+    private Integer shippingTimeMax;
 }

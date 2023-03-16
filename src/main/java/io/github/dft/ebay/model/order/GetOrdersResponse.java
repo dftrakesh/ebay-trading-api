@@ -13,11 +13,11 @@ public class GetOrdersResponse {
     private String ack;
 
     @JacksonXmlProperty(localName = "HasMoreOrders")
-    public String hasMoreOrders;
+    private String hasMoreOrders;
 
     @JacksonXmlProperty(localName = "PaginationResult")
     private PaginationResult paginationResult;
 
     @JacksonXmlProperty(localName = "OrderArray")
-    protected OrderArray orderArray;
+    private OrderArray orderArray;
 }

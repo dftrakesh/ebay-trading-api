@@ -17,10 +17,10 @@ public class GetSellerListRequest {
     private final String xmlns = "urn:ebay:apis:eBLBaseComponents";
 
     @JacksonXmlProperty(localName = "StartTimeFrom")
-    public String startTimeFrom;
+    private String startTimeFrom;
 
     @JacksonXmlProperty(localName = "StartTimeTo")
-    public String startTimeTo;
+    private String startTimeTo;
 
     @JacksonXmlProperty(localName = "EndTimeFrom")
     private String endTimeFrom;
@@ -41,5 +41,5 @@ public class GetSellerListRequest {
     private boolean includeVariations;
 
     @JacksonXmlProperty(localName = "IncludeWatchCount")
-    public boolean includeWatchCount;
+    private boolean includeWatchCount;
 }

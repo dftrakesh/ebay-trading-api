@@ -12,6 +12,6 @@ public class OrderIDArray implements Serializable{
 
     @JacksonXmlProperty(localName = "OrderID")
     @JacksonXmlElementWrapper(useWrapping = false)
-    public List<String> orderID;
+    private List<String> orderID;
 }
 

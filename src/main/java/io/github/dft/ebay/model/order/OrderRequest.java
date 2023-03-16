@@ -13,5 +13,5 @@ public class OrderRequest {
 
     @JacksonXmlProperty(localName = "OrderID")
     @JacksonXmlElementWrapper(useWrapping = false)
-    protected List<String> orderID;
+    private List<String> orderID;
 }

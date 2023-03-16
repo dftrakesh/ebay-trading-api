@@ -11,27 +11,27 @@ public class Item {
     private String itemID;
 
     @JacksonXmlProperty(localName = "ApplicationData")
-    public String applicationData;
+    private String applicationData;
 
     @JacksonXmlProperty(localName = "AutoPay")
-    public String autoPay;
+    private String autoPay;
 
     @JacksonXmlProperty(localName = "BuyerProtection")
-    public String buyerProtection;
+    private String buyerProtection;
 
     @JacksonXmlProperty(localName = "BuyItNowPrice")
-    public String buyItNowPrice;
+    private String buyItNowPrice;
 
     @JacksonXmlProperty(localName = "IntegratedMerchantCreditCardEnabled")
-    public String integratedMerchantCreditCardEnabled;
+    private String integratedMerchantCreditCardEnabled;
 
     @JacksonXmlProperty(localName = "ListingType")
-    public String listingType;
+    private String listingType;
 
     @JacksonXmlProperty(localName = "PrivateListing")
-    public String privateListing;
+    private String privateListing;
 
     @JacksonXmlProperty(localName = "SellingStatus")
-    public SellingStatus sellingStatus;
+    private SellingStatus sellingStatus;
 }
 

@@ -15,6 +15,6 @@ public class GetItemResponse implements Serializable {
     private String ack;
 
     @JacksonXmlProperty(localName = "Item")
-    protected ItemType itemType;
+    private ItemType itemType;
 
 }

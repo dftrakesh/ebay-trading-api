@@ -9,8 +9,8 @@ import java.io.Serializable;
 public class ShipmentTrackingDetails implements Serializable {
 
     @JacksonXmlProperty(localName = "ShippingCarrierUsed")
-    public String shippingCarrierUsed;
+    private String shippingCarrierUsed;
 
     @JacksonXmlProperty(localName = "ShipmentTrackingNumber")
-    public String shipmentTrackingNumber;
+    private String shipmentTrackingNumber;
 }

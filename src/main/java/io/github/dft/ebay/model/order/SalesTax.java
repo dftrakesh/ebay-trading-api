@@ -7,14 +7,14 @@ import lombok.Data;
 public class SalesTax {
 
     @JacksonXmlProperty(localName = "SalesTaxAmount")
-    public String salesTaxAmount;
+    private String salesTaxAmount;
 
     @JacksonXmlProperty(localName = "SalesTaxPercent")
-    public String salesTaxPercent;
+    private String salesTaxPercent;
 
     @JacksonXmlProperty(localName = "SalesTaxState")
-    public String salesTaxState;
+    private String salesTaxState;
 
     @JacksonXmlProperty(localName = "ShippingIncludedInTax")
-    public String shippingIncludedInTax;
+    private String shippingIncludedInTax;
 }

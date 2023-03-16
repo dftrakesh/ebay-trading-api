@@ -12,8 +12,8 @@ import java.io.Serializable;
 public class Seller implements Serializable {
 
     @JacksonXmlProperty(localName = "RegistrationDate")
-    public String registrationDate;
+    private String registrationDate;
 
     @JacksonXmlProperty(localName = "Site")
-    public String site;
+    private String site;
 }

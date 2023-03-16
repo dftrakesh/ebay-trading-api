@@ -7,20 +7,20 @@ import lombok.Data;
 public class Status {
 
     @JacksonXmlProperty(localName = "DigitalStatus")
-    public String digitalStatus;
+    private String digitalStatus;
 
     @JacksonXmlProperty(localName = "PaymentHoldStatus")
-    public String paymentHoldStatus;
+    private String paymentHoldStatus;
 
     @JacksonXmlProperty(localName = "IntegratedMerchantCreditCardEnabled")
-    public boolean integratedMerchantCreditCardEnabled;
+    private boolean integratedMerchantCreditCardEnabled;
 
     @JacksonXmlProperty(localName = "InquiryStatus")
-    public String inquiryStatus;
+    private String inquiryStatus;
 
     @JacksonXmlProperty(localName = "ReturnStatus")
-    public String returnStatus;
+    private String returnStatus;
 
     @JacksonXmlProperty(localName = "PaymentInstrument")
-    public String paymentInstrument;
+    private String paymentInstrument;
 }

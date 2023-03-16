@@ -7,20 +7,20 @@ import lombok.Data;
 public class PickupMethodSelected {
 
     @JacksonXmlProperty(localName = "MerchantPickupCode")
-    public String merchantPickupCode;
+    private String merchantPickupCode;
 
     @JacksonXmlProperty(localName = "PickupFulfillmentTime")
-    public String pickupFulfillmentTime;
+    private String pickupFulfillmentTime;
 
     @JacksonXmlProperty(localName = "PickupLocationUUID")
-    public String pickupLocationUUID;
+    private String pickupLocationUUID;
 
     @JacksonXmlProperty(localName = "PickupMethod")
-    public String pickupMethod;
+    private String pickupMethod;
 
     @JacksonXmlProperty(localName = "PickupStatus")
-    public String pickupStatus;
+    private String pickupStatus;
 
     @JacksonXmlProperty(localName = "PickupStoreID")
-    public String pickupStoreID;
+    private String pickupStoreID;
 }

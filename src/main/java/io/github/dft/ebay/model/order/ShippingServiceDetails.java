@@ -7,8 +7,8 @@ import lombok.Data;
 public class ShippingServiceDetails {
 
     @JacksonXmlProperty(localName = "ShippingService")
-    public String ShippingService;
+    private String ShippingService;
 
     @JacksonXmlProperty(localName = "TotalShippingCost")
-    public String TotalShippingCost;
+    private String TotalShippingCost;
 }
