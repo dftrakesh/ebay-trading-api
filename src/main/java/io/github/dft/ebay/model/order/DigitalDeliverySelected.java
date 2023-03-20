@@ -7,11 +7,11 @@ import lombok.Data;
 public class DigitalDeliverySelected {
 
     @JacksonXmlProperty(localName = "DeliveryDetails")
-    public DeliveryDetails deliveryDetails;
+    private DeliveryDetails deliveryDetails;
 
     @JacksonXmlProperty(localName = "DeliveryMethod")
-    public String deliveryMethod;
+    private String deliveryMethod;
 
     @JacksonXmlProperty(localName = "DeliveryStatus")
-    public String deliveryStatus;
+    private String deliveryStatus;
 }

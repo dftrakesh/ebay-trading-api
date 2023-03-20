@@ -7,14 +7,14 @@ import lombok.Data;
 public class SellerShipmentToLogisticsProvider {
 
     @JacksonXmlProperty(localName = "ShippingServiceDetails")
-    public ShippingServiceDetails shippingServiceDetails;
+    private ShippingServiceDetails shippingServiceDetails;
 
     @JacksonXmlProperty(localName = "ShippingTimeMax")
-    public String ShippingTimeMax;
+    private String ShippingTimeMax;
 
     @JacksonXmlProperty(localName = "ShippingTimeMin")
-    public String ShippingTimeMin;
+    private String ShippingTimeMin;
 
     @JacksonXmlProperty(localName = "ShipToAddress")
-    public ShipToAddress ShipToAddress;
+    private ShipToAddress ShipToAddress;
 }

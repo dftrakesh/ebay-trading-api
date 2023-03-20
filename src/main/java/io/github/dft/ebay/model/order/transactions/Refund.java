@@ -7,23 +7,23 @@ import lombok.Data;
 public class Refund {
 
     @JacksonXmlProperty(localName = "FeeOrCreditAmount")
-    public String feeOrCreditAmount;
+    private String feeOrCreditAmount;
 
     @JacksonXmlProperty(localName = "ReferenceID")
-    public ReferenceID referenceID;
+    private ReferenceID referenceID;
 
     @JacksonXmlProperty(localName = "RefundAmount")
-    public String refundAmount;
+    private String refundAmount;
 
     @JacksonXmlProperty(localName = "RefundStatus")
-    public String refundStatus;
+    private String refundStatus;
 
     @JacksonXmlProperty(localName = "RefundTime")
-    public String refundTime;
+    private String refundTime;
 
     @JacksonXmlProperty(localName = "RefundTo")
-    public String refundTo;
+    private String refundTo;
 
     @JacksonXmlProperty(localName = "RefundType")
-    public String refundType;
+    private String refundType;
 }

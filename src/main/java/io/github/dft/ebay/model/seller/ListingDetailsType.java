@@ -11,5 +11,5 @@ import java.io.Serializable;
 public class ListingDetailsType implements Serializable {
 
     @JacksonXmlProperty(localName = "startTime")
-    protected String startTime;
+    private String startTime;
 }

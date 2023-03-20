@@ -10,8 +10,8 @@ import java.io.Serializable;
 public class ConvertedCurrentPrice implements Serializable {
 
     @JacksonXmlProperty(isAttribute = true, localName = "currencyID")
-    public String currencyID;
+    private String currencyID;
 
     @JacksonXmlText
-    public Double text;
+    private Double text;
 }

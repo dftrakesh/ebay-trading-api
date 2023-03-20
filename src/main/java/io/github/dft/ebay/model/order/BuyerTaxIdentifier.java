@@ -7,11 +7,11 @@ import lombok.Data;
 public class BuyerTaxIdentifier {
 
     @JacksonXmlProperty(localName = "Attribute")
-    public Attribute attribute;
+    private Attribute attribute;
 
     @JacksonXmlProperty(localName = "ID")
-    public String id;
+    private String id;
 
     @JacksonXmlProperty(localName = "Type")
-    public String type;
+    private String type;
 }

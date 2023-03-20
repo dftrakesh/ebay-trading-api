@@ -13,14 +13,14 @@ import java.io.Serializable;
 public class ItemTransactionID implements Serializable {
 
     @JacksonXmlProperty(localName = "ItemID")
-    public String itemID;
+    private String itemID;
 
     @JacksonXmlProperty(localName = "OrderLineItemID")
-    public String orderLineItemID;
+    private String orderLineItemID;
 
     @JacksonXmlProperty(localName = "SKU")
-    public String sKU;
+    private String sKU;
 
     @JacksonXmlProperty(localName = "TransactionID")
-    public String transactionID;
+    private String transactionID;
 }

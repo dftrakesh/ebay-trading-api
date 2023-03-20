@@ -9,8 +9,8 @@ import java.io.Serializable;
 @Data
 public class ActualShippingCost implements Serializable {
     @JacksonXmlProperty(localName = "currencyID")
-    public String currencyID;
+    private String currencyID;
 
     @JacksonXmlText
-    public Double text;
+    private Double text;
 }

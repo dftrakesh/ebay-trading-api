@@ -15,5 +15,5 @@ public class GetOrderTransactionsResponse implements Serializable {
     private String ack;
 
     @JacksonXmlProperty(localName = "OrderArray")
-    protected OrderArray orderArray;
+    private OrderArray orderArray;
 }

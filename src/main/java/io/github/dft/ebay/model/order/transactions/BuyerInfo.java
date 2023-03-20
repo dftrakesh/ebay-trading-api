@@ -11,8 +11,8 @@ import java.io.Serializable;
 public class BuyerInfo implements Serializable {
 
     @JacksonXmlProperty(localName = "BuyerTaxIdentifier")
-    public BuyerTaxIdentifier buyerTaxIdentifier;
+    private BuyerTaxIdentifier buyerTaxIdentifier;
 
     @JacksonXmlProperty(localName = "ShippingAddress")
-    public ShippingAddress shippingAddress;
+    private ShippingAddress shippingAddress;
 }

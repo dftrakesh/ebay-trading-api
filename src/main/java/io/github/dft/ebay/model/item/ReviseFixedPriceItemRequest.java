@@ -19,5 +19,5 @@ public class ReviseFixedPriceItemRequest {
     private EbayToken RequesterCredentials;
 
     @JacksonXmlProperty(localName = "Item")
-    protected ItemType itemType;
+    private ItemType itemType;
 }

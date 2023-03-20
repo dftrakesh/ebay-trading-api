@@ -20,20 +20,20 @@ public class GetItemTransactionsResponse {
     private PaginationResult paginationResult;
 
     @JacksonXmlProperty(localName = "Item")
-    protected Item item;
+    private Item item;
 
     @JacksonXmlProperty(localName = "HasMoreTransactions")
-    public boolean hasMoreTransactions;
+    private boolean hasMoreTransactions;
 
     @JacksonXmlProperty(localName = "TransactionsPerPage")
-    public Integer transactionsPerPage;
+    private Integer transactionsPerPage;
 
     @JacksonXmlProperty(localName = "PageNumber")
-    public Integer pageNumber;
+    private Integer pageNumber;
 
     @JacksonXmlProperty(localName = "ReturnedTransactionCountActual")
-    public Integer returnedTransactionCountActual;
+    private Integer returnedTransactionCountActual;
 
     @JacksonXmlProperty(localName = "TransactionArray")
-    public ItemTransactionArray itemtransactionArray;
+    private ItemTransactionArray itemtransactionArray;
 }

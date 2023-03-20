@@ -6,8 +6,8 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlText;
 public class BuyItNowPrice {
 
     @JacksonXmlProperty(isAttribute = true,localName = "currencyID")
-    public String currencyID;
+    private String currencyID;
 
     @JacksonXmlText
-    public Double text;
+    private Double text;
 }

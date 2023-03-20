@@ -7,14 +7,14 @@ import lombok.Data;
 public class PaymentHoldDetails {
 
     @JacksonXmlProperty(localName = "ExpectedReleaseDate")
-    public String expectedReleaseDate;
+    private String expectedReleaseDate;
 
     @JacksonXmlProperty(localName = "NumOfReqSellerActions")
-    public String numOfReqSellerActions;
+    private String numOfReqSellerActions;
 
     @JacksonXmlProperty(localName = "PaymentHoldReason")
-    public String paymentHoldReason;
+    private String paymentHoldReason;
 
     @JacksonXmlProperty(localName = "RequiredSellerActionArray")
-    public String requiredSellerActionArray;
+    private String requiredSellerActionArray;
 }

@@ -13,5 +13,5 @@ import java.util.List;
 public class ItemTransactionIDArray implements Serializable {
 
     @JacksonXmlProperty(localName = "ItemTransactionID")
-    public List<ItemTransactionID> itemTransactionID;
+    private List<ItemTransactionID> itemTransactionID;
 }

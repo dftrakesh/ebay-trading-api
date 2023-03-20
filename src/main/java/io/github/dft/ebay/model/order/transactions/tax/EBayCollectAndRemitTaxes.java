@@ -7,11 +7,11 @@ import lombok.Data;
 public class EBayCollectAndRemitTaxes {
 
     @JacksonXmlProperty(localName = "eBayReference")
-    public String eBayReference;
+    private String eBayReference;
 
     @JacksonXmlProperty(localName = "TaxDetails")
-    public TaxDetails taxDetails;
+    private TaxDetails taxDetails;
 
     @JacksonXmlProperty(localName = "TotalTaxAmount")
-    public TotalTaxAmount totalTaxAmount;
+    private TotalTaxAmount totalTaxAmount;
 }

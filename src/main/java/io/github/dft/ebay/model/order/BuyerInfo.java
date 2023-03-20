@@ -7,5 +7,5 @@ import lombok.Data;
 public class BuyerInfo {
 
     @JacksonXmlProperty(localName = "BuyerTaxIdentifier")
-    public BuyerTaxIdentifier buyerTaxIdentifier;
+    private BuyerTaxIdentifier buyerTaxIdentifier;
 }

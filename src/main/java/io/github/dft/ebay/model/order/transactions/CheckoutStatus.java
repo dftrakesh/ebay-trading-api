@@ -7,20 +7,20 @@ import lombok.Data;
 public class CheckoutStatus {
 
     @JacksonXmlProperty(localName = "eBayPaymentStatus")
-    public String eBayPaymentStatus;
+    private String eBayPaymentStatus;
 
     @JacksonXmlProperty(localName = "LastModifiedTime")
-    public String lastModifiedTime;
+    private String lastModifiedTime;
 
     @JacksonXmlProperty(localName = "PaymentMethod")
-    public String paymentMethod;
+    private String paymentMethod;
 
     @JacksonXmlProperty(localName = "Status")
-    public String status;
+    private String status;
 
     @JacksonXmlProperty(localName = "IntegratedMerchantCreditCardEnabled")
-    public boolean integratedMerchantCreditCardEnabled;
+    private boolean integratedMerchantCreditCardEnabled;
 
     @JacksonXmlProperty(localName = "PaymentInstrument")
-    public String paymentInstrument;
+    private String paymentInstrument;
 }

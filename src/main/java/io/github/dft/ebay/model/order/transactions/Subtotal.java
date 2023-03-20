@@ -7,8 +7,8 @@ import lombok.Data;
 @Data
 public class Subtotal {
     @JacksonXmlProperty(localName = "currencyID")
-    public String currencyID;
+    private String currencyID;
 
     @JacksonXmlText
-    public Double text;
+    private Double text;
 }

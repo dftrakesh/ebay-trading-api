@@ -7,8 +7,8 @@ import lombok.Data;
 public class DeliveryDetails {
 
     @JacksonXmlProperty(localName = "Recipient")
-    public Recipient recipient;
+    private Recipient recipient;
 
     @JacksonXmlProperty(localName = "Sender")
-    public Sender sender;
+    private Sender sender;
 }

@@ -15,5 +15,5 @@ public class TransactionArrayType implements Serializable {
 
     @JacksonXmlProperty(localName = "Transaction")
     @JacksonXmlElementWrapper(useWrapping = false)
-    protected List<TransactionType> transaction;
+    private List<TransactionType> transaction;
 }

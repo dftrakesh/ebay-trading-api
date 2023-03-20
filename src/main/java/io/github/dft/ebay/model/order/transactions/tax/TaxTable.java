@@ -7,5 +7,5 @@ import lombok.Data;
 public class TaxTable {
 
     @JacksonXmlProperty(localName = "TaxJurisdiction")
-    public TaxJurisdiction taxJurisdiction;
+    private TaxJurisdiction taxJurisdiction;
 }

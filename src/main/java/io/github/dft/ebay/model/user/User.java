@@ -10,6 +10,5 @@ import lombok.Data;
 public class User {
 
     @JacksonXmlProperty(localName = "RegistrationDate")
-    @JsonProperty("RegistrationDate")
     private String registrationDate;
 }

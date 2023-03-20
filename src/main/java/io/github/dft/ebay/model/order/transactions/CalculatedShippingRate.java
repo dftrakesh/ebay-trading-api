@@ -7,29 +7,29 @@ import lombok.Data;
 public class CalculatedShippingRate {
 
     @JacksonXmlProperty(localName = "OriginatingPostalCode")
-    public Integer originatingPostalCode;
+    private Integer originatingPostalCode;
 
     @JacksonXmlProperty(localName = "PackageDepth")
-    public PackageDepth packageDepth;
+    private PackageDepth packageDepth;
 
     @JacksonXmlProperty(localName = "PackageLength")
-    public PackageLength packageLength;
+    private PackageLength packageLength;
 
     @JacksonXmlProperty(localName = "PackageWidth")
-    public PackageWidth packageWidth;
+    private PackageWidth packageWidth;
 
     @JacksonXmlProperty(localName = "PackagingHandlingCosts")
-    public PackagingHandlingCosts packagingHandlingCosts;
+    private PackagingHandlingCosts packagingHandlingCosts;
 
     @JacksonXmlProperty(localName = "ShippingIrregular")
-    public boolean shippingIrregular;
+    private boolean shippingIrregular;
 
     @JacksonXmlProperty(localName = "ShippingPackage")
-    public String shippingPackage;
+    private String shippingPackage;
 
     @JacksonXmlProperty(localName = "WeightMajor")
-    public WeightMajor weightMajor;
+    private WeightMajor weightMajor;
 
     @JacksonXmlProperty(localName = "WeightMinor")
-    public WeightMinor weightMinor;
+    private WeightMinor weightMinor;
 }

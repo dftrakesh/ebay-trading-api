@@ -12,29 +12,29 @@ import java.io.Serializable;
 public class ShippingDetails implements Serializable {
 
     @JacksonXmlProperty(localName = "CalculatedShippingRate")
-    public CalculatedShippingRate calculatedShippingRate;
+    private CalculatedShippingRate calculatedShippingRate;
 
     @JacksonXmlProperty(localName = "eBayCollectAndRemitTaxes")
-    public TaxTable taxTable;
+    private TaxTable taxTable;
 
     @JacksonXmlProperty(localName = "ShipmentTrackingDetails")
-    public ShipmentTrackingDetails shipmentTrackingDetails;
+    private ShipmentTrackingDetails shipmentTrackingDetails;
 
     @JacksonXmlProperty(localName = "CODCost")
-    public String codCost;
+    private String codCost;
 
     @JacksonXmlProperty(localName = "eBayEstimatedLabelCost")
-    public String eBayEstimatedLabelCost;
+    private String eBayEstimatedLabelCost;
 
     @JacksonXmlProperty(localName = "InternationalShippingServiceOption")
-    public InternationalShippingServiceOption internationalShippingServiceOption;
+    private InternationalShippingServiceOption internationalShippingServiceOption;
 
     @JacksonXmlProperty(localName = "SalesTax")
-    public SalesTax salesTax;
+    private SalesTax salesTax;
 
     @JacksonXmlProperty(localName = "SellingManagerSalesRecordNumber")
-    public String sellingManagerSalesRecordNumber;
+    private String sellingManagerSalesRecordNumber;
 
     @JacksonXmlProperty(localName = "ShippingServiceOptions")
-    public ShippingServiceOptions shippingServiceOptions;
+    private ShippingServiceOptions shippingServiceOptions;
 }

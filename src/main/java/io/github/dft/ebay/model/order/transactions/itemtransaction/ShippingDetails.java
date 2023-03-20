@@ -12,50 +12,50 @@ import lombok.Data;
 public class ShippingDetails {
 
     @JacksonXmlProperty(localName = "ChangePaymentInstructions")
-    public boolean changePaymentInstructions;
+    private boolean changePaymentInstructions;
 
     @JacksonXmlProperty(localName = "ShippingServiceOptions")
-    public ShippingServiceOptions shippingServiceOptions;
+    private ShippingServiceOptions shippingServiceOptions;
 
     @JacksonXmlProperty(localName = "ShippingType")
-    public String shippingType;
+    private String shippingType;
 
     @JacksonXmlProperty(localName = "SellingManagerSalesRecordNumber")
-    public String sellingManagerSalesRecordNumber;
+    private String sellingManagerSalesRecordNumber;
 
     @JacksonXmlProperty(localName = "ShippingServiceUsed")
-    public String shippingServiceUsed;
+    private String shippingServiceUsed;
 
     @JacksonXmlProperty(localName = "CalculatedShippingRate")
-    public CalculatedShippingRate calculatedShippingRate;
+    private CalculatedShippingRate calculatedShippingRate;
 
     @JacksonXmlProperty(localName = "CODCost")
-    public String codCost;
+    private String codCost;
 
     @JacksonXmlProperty(localName = "eBayEstimatedLabelCost")
-    public String eBayEstimatedLabelCost;
+    private String eBayEstimatedLabelCost;
 
     @JacksonXmlProperty(localName = "ExcludeShipToLocation")
-    public String excludeShipToLocation;
+    private String excludeShipToLocation;
 
     @JacksonXmlProperty(localName = "InternationalShippingServiceOption")
-    public InternationalShippingServiceOption internationalShippingServiceOption;
+    private InternationalShippingServiceOption internationalShippingServiceOption;
 
     @JacksonXmlProperty(localName = "PaymentEdited")
-    public String paymentEdited;
+    private String paymentEdited;
 
     @JacksonXmlProperty(localName = "SalesTax")
-    public SalesTax salesTax;
+    private SalesTax salesTax;
 
     @JacksonXmlProperty(localName = "ShipmentTrackingDetails")
-    public ShipmentTrackingDetails ShipmentTrackingDetails;
+    private ShipmentTrackingDetails ShipmentTrackingDetails;
 
     @JacksonXmlProperty(localName = "ShippingRateErrorMessage")
-    public String shippingRateErrorMessage;
+    private String shippingRateErrorMessage;
 
     @JacksonXmlProperty(localName = "ShippingRateType")
-    public String shippingRateType;
+    private String shippingRateType;
 
     @JacksonXmlProperty(localName = "TaxTable")
-    public TaxTable taxTable;
+    private TaxTable taxTable;
 }

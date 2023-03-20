@@ -12,9 +12,9 @@ public class MonetaryDetails implements Serializable {
 
     @JacksonXmlProperty(localName = "Payments")
     @JacksonXmlElementWrapper(useWrapping = false)
-    public List<Payments> payments;
+    private List<Payments> payments;
 
     @JacksonXmlProperty(localName = "Refunds")
     @JacksonXmlElementWrapper(useWrapping = false)
-    public List<Refunds> refunds;
+    private List<Refunds> refunds;
 }

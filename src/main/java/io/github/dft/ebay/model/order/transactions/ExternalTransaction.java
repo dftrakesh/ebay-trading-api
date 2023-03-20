@@ -9,18 +9,18 @@ import java.io.Serializable;
 public class ExternalTransaction implements Serializable {
 
     @JacksonXmlProperty(localName = "ExternalTransactionID")
-    public String externalTransactionID;
+    private String externalTransactionID;
 
     @JacksonXmlProperty(localName = "ExternalTransactionTime")
-    public String externalTransactionTime;
+    private String externalTransactionTime;
 
     @JacksonXmlProperty(localName = "FeeOrCreditAmount")
-    public String feeOrCreditAmount;
+    private String feeOrCreditAmount;
 
     @JacksonXmlProperty(localName = "PaymentOrRefundAmount")
-    public String paymentOrRefundAmount;
+    private String paymentOrRefundAmount;
 
     @JacksonXmlProperty(localName = "ExternalTransactionStatus")
-    public String externalTransactionStatus;
+    private String externalTransactionStatus;
 }
 

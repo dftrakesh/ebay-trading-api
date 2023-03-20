@@ -7,5 +7,5 @@ import lombok.Data;
 public class MultiLegShippingDetails {
 
     @JacksonXmlProperty(localName = "SellerShipmentToLogisticsProvider")
-    public SellerShipmentToLogisticsProvider sellerShipmentToLogisticsProvider;
+    private SellerShipmentToLogisticsProvider sellerShipmentToLogisticsProvider;
 }

@@ -9,5 +9,5 @@ import lombok.Data;
 public class Variations {
 
     @JacksonXmlProperty(localName = "Variation")
-    public Variation Variation;
+    private Variation Variation;
 }

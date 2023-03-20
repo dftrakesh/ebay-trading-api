@@ -14,5 +14,5 @@ public class ItemArrayType implements Serializable {
 
     @JacksonXmlProperty(localName = "Item")
     @JacksonXmlElementWrapper(useWrapping = false)
-    protected List<ItemType> item;
+    private List<ItemType> item;
 }

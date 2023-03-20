@@ -10,8 +10,8 @@ import java.io.Serializable;
 public class Payer implements Serializable {
 
     @JacksonXmlProperty(localName = "type")
-    public String type;
+    private String type;
 
     @JacksonXmlText
-    public String text;
+    private String text;
 }

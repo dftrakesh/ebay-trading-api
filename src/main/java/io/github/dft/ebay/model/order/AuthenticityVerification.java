@@ -7,11 +7,11 @@ import lombok.Data;
 public class AuthenticityVerification {
 
     @JacksonXmlProperty(localName = "OutcomeReason")
-    public String outcomeReason;
+    private String outcomeReason;
 
     @JacksonXmlProperty(localName = "ServiceCost")
-    public ServiceCost serviceCost;
+    private ServiceCost serviceCost;
 
     @JacksonXmlProperty(localName = "Status")
-    public String status;
+    private String status;
 }

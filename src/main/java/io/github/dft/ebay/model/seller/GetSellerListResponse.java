@@ -14,20 +14,20 @@ public class GetSellerListResponse implements Serializable {
     private String ack;
 
     @JacksonXmlProperty(localName = "HasMoreItems")
-    public boolean hasMoreItems;
+    private boolean hasMoreItems;
 
     @JacksonXmlProperty(localName = "ItemsPerPage")
-    public Integer itemsPerPage;
+    private Integer itemsPerPage;
 
     @JacksonXmlProperty(localName = "PageNumber")
-    public Integer pageNumber;
+    private Integer pageNumber;
 
     @JacksonXmlProperty(localName = "ReturnedItemCountActual")
-    public Integer returnedItemCountActual;
+    private Integer returnedItemCountActual;
 
     @JacksonXmlProperty(localName = "PaginationResult")
     private PaginationResult paginationResult;
 
     @JacksonXmlProperty(localName = "ItemArray")
-    protected ItemArrayType itemArray;
+    private ItemArrayType itemArray;
 }

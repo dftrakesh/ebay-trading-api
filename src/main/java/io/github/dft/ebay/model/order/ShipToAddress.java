@@ -7,47 +7,47 @@ import lombok.Data;
 public class ShipToAddress {
 
     @JacksonXmlProperty(localName = "AddressAttribute")
-    public String addressAttribute;
+    private String addressAttribute;
 
     @JacksonXmlProperty(localName = "AddressID")
-    public String addressID;
+    private String addressID;
 
     @JacksonXmlProperty(localName = "AddressOwner")
-    public String addressOwner;
+    private String addressOwner;
 
     @JacksonXmlProperty(localName = "AddressUsage")
-    public String addressUsage;
+    private String addressUsage;
 
     @JacksonXmlProperty(localName = "CityName")
-    public String cityName;
+    private String cityName;
 
     @JacksonXmlProperty(localName = "Country")
-    public String country;
+    private String country;
 
     @JacksonXmlProperty(localName = "CountryName")
-    public String countryName;
+    private String countryName;
 
     @JacksonXmlProperty(localName = "ExternalAddressID")
-    public String externalAddressID;
+    private String externalAddressID;
 
     @JacksonXmlProperty(localName = "Name")
-    public String name;
+    private String name;
 
     @JacksonXmlProperty(localName = "Phone")
-    public String phone;
+    private String phone;
 
     @JacksonXmlProperty(localName = "PostalCode")
-    public String postalCode;
+    private String postalCode;
 
     @JacksonXmlProperty(localName = "ReferenceID")
-    public String referenceID;
+    private String referenceID;
 
     @JacksonXmlProperty(localName = "StateOrProvince")
-    public String stateOrProvince;
+    private String stateOrProvince;
 
     @JacksonXmlProperty(localName = "Street1")
-    public String street1;
+    private String street1;
 
     @JacksonXmlProperty(localName = "Street2")
-    public String street2;
+    private String street2;
 }

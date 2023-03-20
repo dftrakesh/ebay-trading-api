@@ -7,17 +7,17 @@ import lombok.Data;
 public class ExternalTransaction {
 
     @JacksonXmlProperty(localName = "ExternalTransactionID")
-    public String externalTransactionID;
+    private String externalTransactionID;
 
     @JacksonXmlProperty(localName = "ExternalTransactionStatus")
-    public String externalTransactionStatus;
+    private String externalTransactionStatus;
 
     @JacksonXmlProperty(localName = "ExternalTransactionTime")
-    public String externalTransactionTime;
+    private String externalTransactionTime;
 
     @JacksonXmlProperty(localName = "FeeOrCreditAmount")
-    public String feeOrCreditAmount;
+    private String feeOrCreditAmount;
 
     @JacksonXmlProperty(localName = "PaymentOrRefundAmount")
-    public String paymentOrRefundAmount;
+    private String paymentOrRefundAmount;
 }

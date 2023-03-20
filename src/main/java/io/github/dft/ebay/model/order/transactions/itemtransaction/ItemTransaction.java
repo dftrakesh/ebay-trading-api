@@ -27,145 +27,145 @@ public class ItemTransaction implements Serializable {
     private Integer quantityPurchased;
 
     @JacksonXmlProperty(localName = "Buyer")
-    public Buyer buyer;
+    private Buyer buyer;
 
     @JacksonXmlProperty(localName = "BestOfferSale")
-    public String bestOfferSale;
+    private String bestOfferSale;
 
     @JacksonXmlProperty(localName = "BuyerGuaranteePrice")
-    public String buyerGuaranteePrice;
+    private String buyerGuaranteePrice;
 
     @JacksonXmlProperty(localName = "BuyerPackageEnclosures")
-    public BuyerPackageEnclosures buyerPackageEnclosures;
+    private BuyerPackageEnclosures buyerPackageEnclosures;
 
     @JacksonXmlProperty(localName = "ActualHandlingCost")
-    public String actualHandlingCost;
+    private String actualHandlingCost;
 
     @JacksonXmlProperty(localName = "ActualShippingCost")
-    public String actualShippingCost;
+    private String actualShippingCost;
 
     @JacksonXmlProperty(localName = "AdjustmentAmount")
-    public String adjustmentAmount;
+    private String adjustmentAmount;
 
     @JacksonXmlProperty(localName = "AmountPaid")
-    public String amountPaid;
+    private String amountPaid;
 
     @JacksonXmlProperty(localName = "ExtendedOrderID")
-    public String extendedOrderID;
+    private String extendedOrderID;
 
     @JacksonXmlProperty(localName = "BuyerCheckoutMessage")
-    public String buyerCheckoutMessage;
+    private String buyerCheckoutMessage;
 
     @JacksonXmlProperty(localName = "ConvertedAdjustmentAmount")
-    public String convertedAdjustmentAmount;
+    private String convertedAdjustmentAmount;
 
     @JacksonXmlProperty(localName = "ConvertedAmountPaid")
-    public String convertedAmountPaid;
+    private String convertedAmountPaid;
 
     @JacksonXmlProperty(localName = "ConvertedTransactionPrice")
-    public String convertedTransactionPrice;
+    private String convertedTransactionPrice;
 
     @JacksonXmlProperty(localName = "DepositType")
-    public String depositType;
+    private String depositType;
 
     @JacksonXmlProperty(localName = "CreatedDate")
-    public String createdDate;
+    private String createdDate;
 
     @JacksonXmlProperty(localName = "DigitalDeliverySelected")
-    public DigitalDeliverySelected digitalDeliverySelected;
+    private DigitalDeliverySelected digitalDeliverySelected;
 
     @JacksonXmlProperty(localName = "eBayCollectAndRemitTax")
-    public boolean eBayCollectAndRemitTax;
+    private boolean eBayCollectAndRemitTax;
 
     @JacksonXmlProperty(localName = "eBayCollectAndRemitTaxes")
-    public EBayCollectAndRemitTaxes eBayCollectAndRemitTaxes;
+    private EBayCollectAndRemitTaxes eBayCollectAndRemitTaxes;
 
     @JacksonXmlProperty(localName = "eBayPlusTransaction")
-    public String eBayPlusTransaction;
+    private String eBayPlusTransaction;
 
     @JacksonXmlProperty(localName = "ExternalTransaction")
-    public ExternalTransaction externalTransaction;
+    private ExternalTransaction externalTransaction;
 
     @JacksonXmlProperty(localName = "FinalValueFee")
-    public String finalValueFee;
+    private String finalValueFee;
 
     @JacksonXmlProperty(localName = "Gift")
-    public String gift;
+    private String gift;
 
     @JacksonXmlProperty(localName = "GiftSummary")
-    public String giftSummary;
+    private String giftSummary;
 
     @JacksonXmlProperty(localName = "GuaranteedDelivery")
-    public String guaranteedDelivery;
+    private String guaranteedDelivery;
 
     @JacksonXmlProperty(localName = "GuaranteedShipping")
-    public String guaranteedShipping;
+    private String guaranteedShipping;
 
     @JacksonXmlProperty(localName = "IntangibleItem")
-    public String intangibleItem;
+    private String intangibleItem;
 
     @JacksonXmlProperty(localName = "MonetaryDetails")
-    public MonetaryDetails monetaryDetails;
+    private MonetaryDetails monetaryDetails;
 
     @JacksonXmlProperty(localName = "MultiLegShippingDetails")
-    public MultiLegShippingDetails multiLegShippingDetails;
+    private MultiLegShippingDetails multiLegShippingDetails;
 
     @JacksonXmlProperty(localName = "PaymentHoldDetails")
-    public PaymentHoldDetails paymentHoldDetails;
+    private PaymentHoldDetails paymentHoldDetails;
 
     @JacksonXmlProperty(localName = "PayPalEmailAddress")
-    public String payPalEmailAddress;
+    private String payPalEmailAddress;
 
     @JacksonXmlProperty(localName = "PickupDetails")
-    public PickupDetails pickupDetails;
+    private PickupDetails pickupDetails;
 
     @JacksonXmlProperty(localName = "PickupMethodSelected")
-    public PickupMethodSelected pickupMethodSelected;
+    private PickupMethodSelected pickupMethodSelected;
 
     @JacksonXmlProperty(localName = "Platform")
-    public String platform;
+    private String platform;
 
     @JacksonXmlProperty(localName = "SellingManagerProductDetails")
-    public String sellingManagerProductDetails;
+    private String sellingManagerProductDetails;
 
     @JacksonXmlProperty(localName = "ShippingDetails")
-    public ShippingDetails shippingDetails;
+    private ShippingDetails shippingDetails;
 
     @JacksonXmlProperty(localName = "ShippingServiceSelected")
-    public ShippingServiceSelected shippingServiceSelected;
+    private ShippingServiceSelected shippingServiceSelected;
 
     @JacksonXmlProperty(localName = "InventoryReservationID")
-    public String inventoryReservationID;
+    private String inventoryReservationID;
 
     @JacksonXmlProperty(localName = "InvoicesSentTime")
-    public String invoiceSentTime;
+    private String invoiceSentTime;
 
     @JacksonXmlProperty(localName = "LogisticsPlanType")
-    public String logisticsPlanType;
+    private String logisticsPlanType;
 
     @JacksonXmlProperty(localName = "IsMultiLegShipping")
-    public String isMultiLegShipping;
+    private String isMultiLegShipping;
 
     @JacksonXmlProperty(localName = "OrderLineItemID")
-    public String orderLineItemID;
+    private String orderLineItemID;
 
     @JacksonXmlProperty(localName = "PaidTime")
-    public String paidTime;
+    private String paidTime;
 
     @JacksonXmlProperty(localName = "Program")
-    public Program program;
+    private Program program;
 
     @JacksonXmlProperty(localName = "SellerDiscounts")
-    public SellerDiscounts sellerDiscounts;
+    private SellerDiscounts sellerDiscounts;
 
     @JacksonXmlProperty(localName = "ShippedTime")
-    public String shippedTime;
+    private String shippedTime;
 
     @JacksonXmlProperty(localName = "Status")
-    public TransactionStatus transactionStatus;
+    private TransactionStatus transactionStatus;
 
     @JacksonXmlProperty(localName = "TransactionSiteID")
-    public String transactionSiteID;
+    private String transactionSiteID;
 
     @JacksonXmlProperty(localName = "Variation")
     private Variation variation;

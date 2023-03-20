@@ -9,5 +9,5 @@ import java.io.Serializable;
 public class SecondaryCategory implements Serializable {
 
     @JacksonXmlProperty(localName = "CategoryID")
-    public Integer categoryID;
+    private Integer categoryID;
 }

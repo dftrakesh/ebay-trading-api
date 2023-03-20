@@ -18,7 +18,7 @@ public class ErrorType {
     private String longMessage;
 
     @JacksonXmlProperty(localName = "ErrorCode")
-    protected String errorCode;
+    private String errorCode;
 
     @JacksonXmlProperty(localName = "UserDisplayHint")
     private Boolean userDisplayHint;
