@@ -9,9 +9,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(toBuilder = true)
-public class RequesterCredentials {
+public class AccessCredential {
 
     private String eBayAuthToken;
+    private String refreshToken;
     private String devName;
     private String appName;
     private String certName;
