@@ -12,4 +12,7 @@ public class SellingStatusType implements Serializable {
 
     @JacksonXmlProperty(localName = "CurrentPrice")
     private Double currentPrice;
+
+    @JacksonXmlProperty(localName = "QuantitySold")
+    private Integer quantitySold;
 }

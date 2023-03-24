@@ -1,6 +1,6 @@
 package io.github.dft.ebay;
 
-import io.github.dft.ebay.model.RequesterCredentials;
+import io.github.dft.ebay.model.AccessCredential;
 import io.github.dft.ebay.model.fetchtoken.FetchTokenRequest;
 import lombok.SneakyThrows;
 
@@ -21,7 +21,7 @@ public class FetchToken extends EbayTradingAPISdk {
     private final String HTTP_HEADER_KEY_X_EBAY_API_COMPATIBILITY_LEVEL = "X-EBAY-API-COMPATIBILITY-LEVEL";
 
     @SneakyThrows
-    public FetchToken(RequesterCredentials accessCredentials) {
+    public FetchToken(AccessCredential accessCredentials) {
         super(accessCredentials);
     }
 
@@ -30,11 +30,11 @@ public class FetchToken extends EbayTradingAPISdk {
 
         String payload = toStr(fetchTokenRequest);
         HttpRequest request = HttpRequest.newBuilder(new URI(XML_API_PRODUCTION_GATEWAY))
-                .header(HTTP_HEADER_KEY_X_EBAY_API_COMPATIBILITY_LEVEL, requesterCredentials.getApiCompatibilityLevel())
+                .header(HTTP_HEADER_KEY_X_EBAY_API_COMPATIBILITY_LEVEL, accessCredential.getApiCompatibilityLevel())
                 .header(HTTP_HEADER_KEY_CONTENT_TYPE, HTTP_HEADER_CONTENT_TYPE_VALUE)
-                .header(HTTP_HEADER_KEY_X_EBAY_API_DEV_NAME, requesterCredentials.getDevName())
-                .header(HTTP_HEADER_KEY_X_EBAY_API_APP_NAME, requesterCredentials.getAppName())
-                .header(HTTP_HEADER_KEY_X_EBAY_API_CERT_NAME, requesterCredentials.getCertName())
+                .header(HTTP_HEADER_KEY_X_EBAY_API_DEV_NAME, accessCredential.getDevName())
+                .header(HTTP_HEADER_KEY_X_EBAY_API_APP_NAME, accessCredential.getAppName())
+                .header(HTTP_HEADER_KEY_X_EBAY_API_CERT_NAME, accessCredential.getCertName())
                 .header(HTTP_HEADER_KEY_X_EBAY_API_CALL_NAME, EBAY_API_CALL_NAME_FETCH_TOKEN)
                 .POST(HttpRequest.BodyPublishers.ofString(payload))
                 .build();

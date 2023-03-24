@@ -1,6 +1,6 @@
 package io.github.dft.ebay;
 
-import io.github.dft.ebay.model.RequesterCredentials;
+import io.github.dft.ebay.model.AccessCredential;
 import io.github.dft.ebay.model.handler.JsonBodyHandler;
 import io.github.dft.ebay.model.token.AccessToken;
 import io.github.dft.ebay.model.token.AccessTokenRequest;
@@ -27,7 +27,7 @@ public class TokenAPI extends EbayTradingAPISdk {
     private final String EBAY_PD_SCOPES = "https://api.ebay.com/oauth/api_scope https://api.ebay.com/oauth/api_scope/commerce.identity.readonly https://api.ebay.com/oauth/api_scope/sell.inventory https://api.ebay.com/oauth/api_scope/sell.account https://api.ebay.com/oauth/api_scope/sell.fulfillment ";
 
     public TokenAPI() {
-        super(new RequesterCredentials());
+        super(new AccessCredential());
     }
 
     @SneakyThrows
