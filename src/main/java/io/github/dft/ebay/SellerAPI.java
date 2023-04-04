@@ -47,7 +47,6 @@ public class SellerAPI extends EbayTradingAPISdk {
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
         String strResponse = response.body();
-        System.out.println("response: {}" + response.body());
 
         return toObj(strResponse, GetSellerListResponse.class);
     }
