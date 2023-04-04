@@ -2,6 +2,7 @@ package io.github.dft.ebay.model.order.transactions.itemtransaction;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import io.github.dft.ebay.model.order.DetailLevelCodeType;
 import io.github.dft.ebay.model.seller.Pagination;
 import io.github.dft.ebay.model.token.EbayToken;
 import lombok.AllArgsConstructor;
@@ -43,5 +44,5 @@ public class GetItemTransactionsRequest {
     private Pagination pagination;
 
     @JacksonXmlProperty(localName = "DetailLevel")
-    private String detailLevel;
+    private DetailLevelCodeType detailLevel;
 }

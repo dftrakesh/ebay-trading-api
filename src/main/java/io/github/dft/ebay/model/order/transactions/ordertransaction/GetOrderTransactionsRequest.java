@@ -2,6 +2,7 @@ package io.github.dft.ebay.model.order.transactions.ordertransaction;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import io.github.dft.ebay.model.order.DetailLevelCodeType;
 import io.github.dft.ebay.model.order.transactions.ItemTransactionIDArray;
 import io.github.dft.ebay.model.order.transactions.OrderIDArray;
 import io.github.dft.ebay.model.token.EbayToken;
@@ -27,5 +28,5 @@ public class GetOrderTransactionsRequest {
     private OrderIDArray orderIDArray;
 
     @JacksonXmlProperty(localName = "DetailLevel")
-    private String detailLevel;
+    private DetailLevelCodeType detailLevel;
 }

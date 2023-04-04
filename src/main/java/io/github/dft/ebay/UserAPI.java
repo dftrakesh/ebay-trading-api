@@ -7,10 +7,9 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import io.github.dft.ebay.model.AccessCredential;
 import io.github.dft.ebay.model.user.GetUserRequest;
 import io.github.dft.ebay.model.user.GetUserResponse;
+import lombok.SneakyThrows;
 
-import java.io.IOException;
 import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
@@ -31,7 +30,8 @@ public class UserAPI extends EbayTradingAPISdk {
         super(accessCredential);
     }
 
-    public GetUserResponse getUser(GetUserRequest getUserRequest) throws IOException, InterruptedException, URISyntaxException {
+    @SneakyThrows
+    public GetUserResponse getUser(GetUserRequest getUserRequest) {
         getUserRequest.setRequesterCredentials(getEbayToken());
         String payload = toStr(getUserRequest);
 

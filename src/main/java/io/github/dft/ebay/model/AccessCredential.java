@@ -20,4 +20,5 @@ public class AccessCredential {
     private String ruName;
     private String siteID;
     private String apiCompatibilityLevel;
+    private String ebayUserId;
 }
