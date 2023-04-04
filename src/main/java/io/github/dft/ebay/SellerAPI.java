@@ -3,11 +3,11 @@ package io.github.dft.ebay;
 import io.github.dft.ebay.model.AccessCredential;
 import io.github.dft.ebay.model.seller.GetSellerListRequest;
 import io.github.dft.ebay.model.seller.GetSellerListResponse;
+import io.github.dft.ebay.model.seller.GranularityLevelCodeType;
 import io.github.dft.ebay.model.seller.Pagination;
+import lombok.SneakyThrows;
 
-import java.io.IOException;
 import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.text.SimpleDateFormat;
@@ -30,7 +30,8 @@ public class SellerAPI extends EbayTradingAPISdk {
         super(accessCredential);
     }
 
-    public GetSellerListResponse getItems(GetSellerListRequest getSellerListRequest) throws URISyntaxException, IOException, InterruptedException {
+    @SneakyThrows
+    public GetSellerListResponse getItems(GetSellerListRequest getSellerListRequest) {
         getSellerListRequest.setRequesterCredentials(getEbayToken());
         String payload = toStr(getSellerListRequest);
 
@@ -46,15 +47,17 @@ public class SellerAPI extends EbayTradingAPISdk {
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
         String strResponse = response.body();
+        System.out.println("response: {}" + response.body());
 
         return toObj(strResponse, GetSellerListResponse.class);
     }
 
-    public GetSellerListResponse getItems(Calendar startTimeFrom, Calendar startTimeTo, int iPage) throws URISyntaxException, IOException, InterruptedException {
+    @SneakyThrows
+    public GetSellerListResponse getItems(Calendar startTimeFrom, Calendar startTimeTo, int iPage) {
         GetSellerListRequest getSellerListRequest = new GetSellerListRequest();
         getSellerListRequest.setEndTimeFrom(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.000'Z'").format(startTimeFrom.getTime()));
         getSellerListRequest.setEndTimeTo(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.000'Z'").format(startTimeTo.getTime()));
-        getSellerListRequest.setGranularityLevel("Coarse");
+        getSellerListRequest.setGranularityLevel(GranularityLevelCodeType.Coarse);
         getSellerListRequest.setIncludeVariations(true);
         Pagination pagination = new Pagination();
         pagination.setPageNumber(iPage);

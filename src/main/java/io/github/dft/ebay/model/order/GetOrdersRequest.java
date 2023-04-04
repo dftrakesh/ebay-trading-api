@@ -32,11 +32,11 @@ public class GetOrdersRequest {
     private Integer numberOfDays;
 
     @JacksonXmlProperty(localName = "OrderStatus")
-    private String orderStatus;
+    private OrderStatusCodeType orderStatus;
 
     @JacksonXmlProperty(localName = "Version")
     private Integer version;
 
     @JacksonXmlProperty(localName = "DetailLevel")
-    private String detailLevel;
+    private DetailLevelCodeType detailLevel;
 }

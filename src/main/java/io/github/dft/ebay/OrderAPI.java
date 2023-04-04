@@ -8,10 +8,9 @@ import io.github.dft.ebay.model.order.transactions.itemtransaction.GetItemTransa
 import io.github.dft.ebay.model.order.transactions.itemtransaction.GetItemTransactionsResponse;
 import io.github.dft.ebay.model.order.transactions.ordertransaction.GetOrderTransactionsRequest;
 import io.github.dft.ebay.model.order.transactions.ordertransaction.GetOrderTransactionsResponse;
+import lombok.SneakyThrows;
 
-import java.io.IOException;
 import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
@@ -36,7 +35,8 @@ public class OrderAPI extends EbayTradingAPISdk {
         super(accessCredential);
     }
 
-    public GetOrdersResponse getOrders(GetOrdersRequest getOrderRequest) throws IOException, InterruptedException, URISyntaxException {
+    @SneakyThrows
+    public GetOrdersResponse getOrders(GetOrdersRequest getOrderRequest) {
         getOrderRequest.setRequesterCredentials(getEbayToken());
         String payload = toStr(getOrderRequest);
 
@@ -55,7 +55,8 @@ public class OrderAPI extends EbayTradingAPISdk {
         return toObj(strResponse, GetOrdersResponse.class);
     }
 
-    public GetItemTransactionsResponse GetItemTransactions(GetItemTransactionsRequest getItemTransactionsRequest) throws IOException, InterruptedException, URISyntaxException {
+    @SneakyThrows
+    public GetItemTransactionsResponse GetItemTransactions(GetItemTransactionsRequest getItemTransactionsRequest) {
         getItemTransactionsRequest.setRequesterCredentials(getEbayToken());
         String payload = toStr(getItemTransactionsRequest);
 
@@ -74,7 +75,8 @@ public class OrderAPI extends EbayTradingAPISdk {
         return toObj(strResponse, GetItemTransactionsResponse.class);
     }
 
-    public GetOrderTransactionsResponse GetOrderTransactions(GetOrderTransactionsRequest getOrderTransactionsRequest) throws IOException, InterruptedException, URISyntaxException {
+    @SneakyThrows
+    public GetOrderTransactionsResponse GetOrderTransactions(GetOrderTransactionsRequest getOrderTransactionsRequest) {
         getOrderTransactionsRequest.setRequesterCredentials(getEbayToken());
         String payload = toStr(getOrderTransactionsRequest);
 
