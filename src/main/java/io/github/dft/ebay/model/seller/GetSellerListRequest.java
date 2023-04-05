@@ -32,7 +32,7 @@ public class GetSellerListRequest {
     private Pagination pagination;
 
     @JacksonXmlProperty(localName = "GranularityLevel")
-    private String granularityLevel;
+    private GranularityLevelCodeType granularityLevel;
 
     @JacksonXmlProperty(localName = "RequesterCredentials")
     private EbayToken requesterCredentials;

@@ -2,6 +2,7 @@ package io.github.dft.ebay.model.order;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import io.github.dft.ebay.model.seller.Pagination;
 import io.github.dft.ebay.model.token.EbayToken;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -32,11 +33,14 @@ public class GetOrdersRequest {
     private Integer numberOfDays;
 
     @JacksonXmlProperty(localName = "OrderStatus")
-    private String orderStatus;
+    private OrderStatusCodeType orderStatus;
 
     @JacksonXmlProperty(localName = "Version")
     private Integer version;
 
+    @JacksonXmlProperty(localName = "Pagination")
+    private Pagination pagination;
+
     @JacksonXmlProperty(localName = "DetailLevel")
-    private String detailLevel;
+    private DetailLevelCodeType detailLevel;
 }

@@ -12,8 +12,7 @@ import java.util.List;
 public class ShippingDetailsType {
 
     @JacksonXmlProperty(localName = "ShippingServiceOptions")
-    @JacksonXmlElementWrapper(useWrapping = false)
-    List<ShippingServiceOptions> shippingServiceOptions;
+    ShippingServiceOptions shippingServiceOptions;
 
     @JacksonXmlProperty(localName = "ShippingType")
     private String shippingType;
