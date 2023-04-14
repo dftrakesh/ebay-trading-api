@@ -24,7 +24,6 @@ public class TokenAPI extends EbayTradingAPISdk {
     private final String HTTP_HEADER_KEY_AUTHORIZATION = "Authorization";
     private final String HTTP_HEADER_CONTENT_TYPE_URLENCODED = "application/x-www-form-urlencoded";
     private final String EBAY_AUTHORIZED_TOKEN_URL = "https://api.ebay.com/identity/v1/oauth2/token";
-    private final String EBAY_PD_SCOPES = "https://api.ebay.com/oauth/api_scope https://api.ebay.com/oauth/api_scope/commerce.identity.readonly https://api.ebay.com/oauth/api_scope/sell.inventory https://api.ebay.com/oauth/api_scope/sell.account https://api.ebay.com/oauth/api_scope/sell.fulfillment ";
 
     public TokenAPI() {
         super(new AccessCredential());
@@ -50,7 +49,7 @@ public class TokenAPI extends EbayTradingAPISdk {
     public AccessToken getAccessTokenFromRefreshToken(AccessTokenRequest accessTokenRequest) {
 
         String requestData = KEY_NAME_GRANT_TYPE + "=" + KEY_NAME_REFRESH_TOKEN + "&" +
-                String.format(KEY_NAME_SCOPE + "=%s", EBAY_PD_SCOPES) + "&" +
+                String.format(KEY_NAME_SCOPE + "=%s", accessTokenRequest.getScopes()) + "&" +
                 String.format(KEY_NAME_REFRESH_TOKEN + "=%s", accessTokenRequest.getRefreshToken());
 
         HttpRequest request = HttpRequest.newBuilder(new URI(EBAY_AUTHORIZED_TOKEN_URL))

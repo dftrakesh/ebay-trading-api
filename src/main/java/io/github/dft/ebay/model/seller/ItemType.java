@@ -5,11 +5,9 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import io.github.dft.ebay.model.order.transactions.ListingDetails;
 import lombok.Data;
 
-import java.io.Serializable;
-
 @Data
 @JacksonXmlRootElement(localName = "Item")
-public class ItemType implements Serializable {
+public class ItemType {
 
     @JacksonXmlProperty(localName = "ItemID")
     private String itemID;
@@ -84,7 +82,7 @@ public class ItemType implements Serializable {
     private PrimaryCategory primaryCategory;
 
     @JacksonXmlProperty(localName = "StartPrice")
-    private String startPrice;
+    private Double startPrice;
 
     @JacksonXmlProperty(localName = "WatchCount")
     private Integer watchCount;

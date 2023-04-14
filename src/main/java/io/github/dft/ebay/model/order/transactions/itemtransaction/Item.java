@@ -67,7 +67,7 @@ public class Item {
     private String site;
 
     @JacksonXmlProperty(localName = "StartPrice")
-    private String startPrice;
+    private Double startPrice;
 
     @JacksonXmlProperty(localName = "Variations")
     private Variations variations;
