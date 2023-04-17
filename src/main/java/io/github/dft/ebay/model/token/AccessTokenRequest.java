@@ -9,6 +9,7 @@ import lombok.Data;
 public class AccessTokenRequest {
 
     private String refreshToken;
+    private String scopes;
     private String appId;
     private String certId;
 }

@@ -1,15 +1,10 @@
 package io.github.dft.ebay.model.seller;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-
-import java.io.Serializable;
 
 @Data
-public class Variation implements Serializable {
+public class Variation {
 
     @JacksonXmlProperty(localName = "SKU")
     private String sku;

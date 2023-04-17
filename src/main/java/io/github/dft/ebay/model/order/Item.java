@@ -17,4 +17,7 @@ public class Item {
 
     @JacksonXmlProperty(localName = "ConditionID")
     private String conditionID;
+
+    @JacksonXmlProperty(localName = "ConditionDisplayName")
+    private String conditionDisplayName;
 }

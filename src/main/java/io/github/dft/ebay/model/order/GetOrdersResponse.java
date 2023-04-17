@@ -15,6 +15,15 @@ public class GetOrdersResponse {
     @JacksonXmlProperty(localName = "HasMoreOrders")
     private boolean hasMoreOrders;
 
+    @JacksonXmlProperty(localName = "OrdersPerPage")
+    private Integer orderPerPage;
+
+    @JacksonXmlProperty(localName = "PageNumber")
+    private Integer pageNumber;
+
+    @JacksonXmlProperty(localName = "ReturnedOrderCountActual")
+    private Integer returnedOrderCountActual;
+
     @JacksonXmlProperty(localName = "PaginationResult")
     private PaginationResult paginationResult;
 

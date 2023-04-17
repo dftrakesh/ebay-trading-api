@@ -1,14 +1,13 @@
 package io.github.dft.ebay.model.order;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
-import io.github.dft.ebay.model.order.transactions.CheckoutStatus;
-import io.github.dft.ebay.model.order.transactions.MonetaryDetails;
-import io.github.dft.ebay.model.order.transactions.ShippingDetails;
-import io.github.dft.ebay.model.order.transactions.ShippingServiceSelected;
+import io.github.dft.ebay.model.order.transactions.*;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Data
 @JacksonXmlRootElement(localName = "Order")
@@ -21,7 +20,7 @@ public class Order implements Serializable {
     private String adjustmentAmount;
 
     @JacksonXmlProperty(localName = "AmountPaid")
-    private String amountPaid;
+    private AmountPaid amountPaid;
 
     @JacksonXmlProperty(localName = "AmountSaved")
     private String amountSaved;
@@ -66,7 +65,8 @@ public class Order implements Serializable {
     private String extendedOrderID;
 
     @JacksonXmlProperty(localName = "ExternalTransaction")
-    private ExternalTransaction externalTransaction;
+    @JacksonXmlElementWrapper(useWrapping = false)
+    private List<ExternalTransaction> externalTransaction;
 
     @JacksonXmlProperty(localName = "IntegratedMerchantCreditCardEnabled")
     private boolean integratedMerchantCreditCardEnabled;

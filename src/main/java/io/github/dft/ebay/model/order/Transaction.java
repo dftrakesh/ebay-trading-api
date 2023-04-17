@@ -44,9 +44,6 @@ public class Transaction implements Serializable {
     @JacksonXmlProperty(localName = "ExtendedOrderID")
     private String extendedOrderID;
 
-    @JacksonXmlProperty(localName = "ExternalTransaction")
-    private ExternalTransaction externalTransaction;
-
     @JacksonXmlProperty(localName = "FinalValueFee")
     private String finalValueFee;
 
