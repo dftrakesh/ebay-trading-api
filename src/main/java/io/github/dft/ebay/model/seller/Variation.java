@@ -1,6 +1,7 @@
 package io.github.dft.ebay.model.seller;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import io.github.dft.ebay.model.order.transactions.StartPrice;
 import lombok.Data;
 
 @Data
@@ -16,7 +17,7 @@ public class Variation {
     private VariationProductListingDetails variationProductListingDetails;
 
     @JacksonXmlProperty(localName = "StartPrice")
-    private Double startPrice;
+    private StartPrice startPrice;
 
     @JacksonXmlProperty(localName = "VariationSpecifics")
     private VariationSpecifics variationSpecifics;
@@ -28,4 +29,7 @@ public class Variation {
     private String variationTitle;
 
     private String itemId;
+    private Integer positionNo;
+    private String createVariant;
+    private String updateVariant;
 }

@@ -3,6 +3,7 @@ package io.github.dft.ebay.model.seller;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import io.github.dft.ebay.model.order.transactions.ListingDetails;
+import io.github.dft.ebay.model.order.transactions.StartPrice;
 import lombok.Data;
 
 @Data
@@ -82,7 +83,7 @@ public class ItemType {
     private PrimaryCategory primaryCategory;
 
     @JacksonXmlProperty(localName = "StartPrice")
-    private Double startPrice;
+    private StartPrice startPrice;
 
     @JacksonXmlProperty(localName = "WatchCount")
     private Integer watchCount;
@@ -95,6 +96,9 @@ public class ItemType {
 
     @JacksonXmlProperty(localName = "ProductListingDetails")
     private ProductListingDetails productListingDetails;
+
+    @JacksonXmlProperty(localName = "ShippingPackageDetails")
+    private ShippingPackageDetails shippingPackageDetails;
 
     @JacksonXmlProperty(localName = "HitCounter")
     private String hitCounter;
