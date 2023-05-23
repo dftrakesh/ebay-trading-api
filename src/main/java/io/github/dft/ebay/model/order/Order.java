@@ -47,13 +47,13 @@ public class Order implements Serializable {
     private CheckoutStatus checkoutStatus;
 
     @JacksonXmlProperty(localName = "ContainseBayPlusTransaction")
-    private boolean containseBayPlusTransaction;
+    private Boolean containseBayPlusTransaction;
 
     @JacksonXmlProperty(localName = "CreatingUserRole")
     private String creatingUserRole;
 
     @JacksonXmlProperty(localName = "eBayCollectAndRemitTax")
-    private boolean eBayCollectAndRemitTax;
+    private Boolean eBayCollectAndRemitTax;
 
     @JacksonXmlProperty(localName = "CreatedTime")
     private String createdTime;
@@ -69,13 +69,13 @@ public class Order implements Serializable {
     private List<ExternalTransaction> externalTransaction;
 
     @JacksonXmlProperty(localName = "IntegratedMerchantCreditCardEnabled")
-    private boolean integratedMerchantCreditCardEnabled;
+    private Boolean integratedMerchantCreditCardEnabled;
 
     @JacksonXmlProperty(localName = "MonetaryDetails")
     private MonetaryDetails monetaryDetails;
 
     @JacksonXmlProperty(localName = "IsMultiLegShipping")
-    private boolean isMultiLegShipping;
+    private Boolean isMultiLegShipping;
 
     @JacksonXmlProperty(localName = "OrderStatus")
     private String orderStatus;

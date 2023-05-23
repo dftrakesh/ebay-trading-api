@@ -1,7 +1,7 @@
 package io.github.dft.ebay;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import io.github.dft.ebay.model.AccessCredential;
+import io.github.dft.ebay.model.EbayCredentials;
 import io.github.dft.ebay.model.order.GetOrdersRequest;
 import io.github.dft.ebay.model.order.GetOrdersResponse;
 import io.github.dft.ebay.model.order.transactions.itemtransaction.GetItemTransactionsRequest;
@@ -31,8 +31,8 @@ public class OrderAPI extends EbayTradingAPISdk {
     private final String HTTP_HEADER_KEY_X_EBAY_API_COMPATIBILITY_LEVEL = "X-EBAY-API-COMPATIBILITY-LEVEL";
 
 
-    public OrderAPI(AccessCredential accessCredential) {
-        super(accessCredential);
+    public OrderAPI(EbayCredentials ebayCredentials) {
+        super(ebayCredentials);
     }
 
     @SneakyThrows
@@ -42,11 +42,11 @@ public class OrderAPI extends EbayTradingAPISdk {
 
         HttpRequest request = HttpRequest.newBuilder(new URI(XML_API_PRODUCTION_GATEWAY))
                 .header(HTTP_HEADER_KEY_X_EBAY_API_CALL_NAME, EBAY_API_CALL_NAME_GET_ORDERS)
-                .header(HTTP_HEADER_KEY_X_EBAY_API_APP_NAME, accessCredential.getAppName())
-                .header(HTTP_HEADER_KEY_X_EBAY_API_DEV_NAME, accessCredential.getDevName())
-                .header(HTTP_HEADER_KEY_X_EBAY_API_CERT_NAME, accessCredential.getCertName())
-                .header(HTTP_HEADER_KEY_X_EBAY_API_SITEID, accessCredential.getSiteID())
-                .header(HTTP_HEADER_KEY_X_EBAY_API_COMPATIBILITY_LEVEL, accessCredential.getApiCompatibilityLevel())
+                .header(HTTP_HEADER_KEY_X_EBAY_API_APP_NAME, ebayCredentials.getAppName())
+                .header(HTTP_HEADER_KEY_X_EBAY_API_DEV_NAME, ebayCredentials.getDevName())
+                .header(HTTP_HEADER_KEY_X_EBAY_API_CERT_NAME, ebayCredentials.getCertName())
+                .header(HTTP_HEADER_KEY_X_EBAY_API_SITEID, ebayCredentials.getSiteID())
+                .header(HTTP_HEADER_KEY_X_EBAY_API_COMPATIBILITY_LEVEL, ebayCredentials.getApiCompatibilityLevel())
                 .header(HTTP_HEADER_KEY_CONTENT_TYPE, HTTP_HEADER_CONTENT_TYPE_VALUE)
                 .POST(HttpRequest.BodyPublishers.ofString(payload))
                 .build();
@@ -62,11 +62,11 @@ public class OrderAPI extends EbayTradingAPISdk {
 
         HttpRequest request = HttpRequest.newBuilder(new URI(XML_API_PRODUCTION_GATEWAY))
                 .header(HTTP_HEADER_KEY_X_EBAY_API_CALL_NAME, EBAY_API_CALL_NAME_GET_ITEM_TRANSACTIONS)
-                .header(HTTP_HEADER_KEY_X_EBAY_API_APP_NAME, accessCredential.getAppName())
-                .header(HTTP_HEADER_KEY_X_EBAY_API_DEV_NAME, accessCredential.getDevName())
-                .header(HTTP_HEADER_KEY_X_EBAY_API_CERT_NAME, accessCredential.getCertName())
-                .header(HTTP_HEADER_KEY_X_EBAY_API_SITEID, accessCredential.getSiteID())
-                .header(HTTP_HEADER_KEY_X_EBAY_API_COMPATIBILITY_LEVEL, accessCredential.getApiCompatibilityLevel())
+                .header(HTTP_HEADER_KEY_X_EBAY_API_APP_NAME, ebayCredentials.getAppName())
+                .header(HTTP_HEADER_KEY_X_EBAY_API_DEV_NAME, ebayCredentials.getDevName())
+                .header(HTTP_HEADER_KEY_X_EBAY_API_CERT_NAME, ebayCredentials.getCertName())
+                .header(HTTP_HEADER_KEY_X_EBAY_API_SITEID, ebayCredentials.getSiteID())
+                .header(HTTP_HEADER_KEY_X_EBAY_API_COMPATIBILITY_LEVEL, ebayCredentials.getApiCompatibilityLevel())
                 .header(HTTP_HEADER_KEY_CONTENT_TYPE, HTTP_HEADER_CONTENT_TYPE_VALUE)
                 .POST(HttpRequest.BodyPublishers.ofString(payload))
                 .build();
@@ -82,11 +82,11 @@ public class OrderAPI extends EbayTradingAPISdk {
 
         HttpRequest request = HttpRequest.newBuilder(new URI(XML_API_PRODUCTION_GATEWAY))
                 .header(HTTP_HEADER_KEY_X_EBAY_API_CALL_NAME, EBAY_API_CALL_NAME_GET_ORDER_TRANSACTIONS)
-                .header(HTTP_HEADER_KEY_X_EBAY_API_APP_NAME, accessCredential.getAppName())
-                .header(HTTP_HEADER_KEY_X_EBAY_API_DEV_NAME, accessCredential.getDevName())
-                .header(HTTP_HEADER_KEY_X_EBAY_API_CERT_NAME, accessCredential.getCertName())
-                .header(HTTP_HEADER_KEY_X_EBAY_API_SITEID, accessCredential.getSiteID())
-                .header(HTTP_HEADER_KEY_X_EBAY_API_COMPATIBILITY_LEVEL, accessCredential.getApiCompatibilityLevel())
+                .header(HTTP_HEADER_KEY_X_EBAY_API_APP_NAME, ebayCredentials.getAppName())
+                .header(HTTP_HEADER_KEY_X_EBAY_API_DEV_NAME, ebayCredentials.getDevName())
+                .header(HTTP_HEADER_KEY_X_EBAY_API_CERT_NAME, ebayCredentials.getCertName())
+                .header(HTTP_HEADER_KEY_X_EBAY_API_SITEID, ebayCredentials.getSiteID())
+                .header(HTTP_HEADER_KEY_X_EBAY_API_COMPATIBILITY_LEVEL, ebayCredentials.getApiCompatibilityLevel())
                 .header(HTTP_HEADER_KEY_CONTENT_TYPE, HTTP_HEADER_CONTENT_TYPE_VALUE)
                 .POST(HttpRequest.BodyPublishers.ofString(payload))
                 .build();

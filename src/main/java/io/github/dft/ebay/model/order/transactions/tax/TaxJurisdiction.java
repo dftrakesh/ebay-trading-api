@@ -13,5 +13,5 @@ public class TaxJurisdiction {
     private Double salesTaxPercent;
 
     @JacksonXmlProperty(localName = "ShippingIncludedInTax")
-    private boolean shippingIncludedInTax;
+    private Boolean shippingIncludedInTax;
 }

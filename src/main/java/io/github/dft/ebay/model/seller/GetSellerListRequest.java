@@ -38,8 +38,8 @@ public class GetSellerListRequest {
     private EbayToken requesterCredentials;
 
     @JacksonXmlProperty(localName = "IncludeVariations")
-    private boolean includeVariations;
+    private Boolean includeVariations;
 
     @JacksonXmlProperty(localName = "IncludeWatchCount")
-    private boolean includeWatchCount;
+    private Boolean includeWatchCount;
 }

@@ -35,7 +35,7 @@ public class GetItemTransactionsRequest {
     private String modTimeTo;
 
     @JacksonXmlProperty(localName = "IncludeFinalValueFee")
-    public boolean includeFinalValueFee;
+    public Boolean includeFinalValueFee;
 
     @JacksonXmlProperty(localName = "NumberOfDays")
     private String numberOfDays;

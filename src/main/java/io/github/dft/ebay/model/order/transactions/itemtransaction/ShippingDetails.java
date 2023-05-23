@@ -12,7 +12,7 @@ import lombok.Data;
 public class ShippingDetails {
 
     @JacksonXmlProperty(localName = "ChangePaymentInstructions")
-    private boolean changePaymentInstructions;
+    private Boolean changePaymentInstructions;
 
     @JacksonXmlProperty(localName = "ShippingServiceOptions")
     private ShippingServiceOptions shippingServiceOptions;

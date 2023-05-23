@@ -23,7 +23,7 @@ public class GetItemTransactionsResponse {
     private Item item;
 
     @JacksonXmlProperty(localName = "HasMoreTransactions")
-    private boolean hasMoreTransactions;
+    private Boolean hasMoreTransactions;
 
     @JacksonXmlProperty(localName = "TransactionsPerPage")
     private Integer transactionsPerPage;

@@ -25,13 +25,13 @@ public class TransactionStatus implements Serializable {
     private String completeStatus;
 
     @JacksonXmlProperty(localName = "BuyerSelectedShipping")
-    private boolean buyerSelectedShipping;
+    private Boolean buyerSelectedShipping;
 
     @JacksonXmlProperty(localName = "PaymentHoldStatus")
     private String paymentHoldStatus;
 
     @JacksonXmlProperty(localName = "IntegratedMerchantCreditCardEnabled")
-    private boolean integratedMerchantCreditCardEnabled;
+    private Boolean integratedMerchantCreditCardEnabled;
 
     @JacksonXmlProperty(localName = "InquiryStatus")
     private String inquiryStatus;

@@ -13,7 +13,7 @@ public class Status {
     private String paymentHoldStatus;
 
     @JacksonXmlProperty(localName = "IntegratedMerchantCreditCardEnabled")
-    private boolean integratedMerchantCreditCardEnabled;
+    private Boolean integratedMerchantCreditCardEnabled;
 
     @JacksonXmlProperty(localName = "InquiryStatus")
     private String inquiryStatus;

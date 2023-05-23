@@ -22,7 +22,7 @@ public class CalculatedShippingRate {
     private PackagingHandlingCosts packagingHandlingCosts;
 
     @JacksonXmlProperty(localName = "ShippingIrregular")
-    private boolean shippingIrregular;
+    private Boolean shippingIrregular;
 
     @JacksonXmlProperty(localName = "ShippingPackage")
     private String shippingPackage;

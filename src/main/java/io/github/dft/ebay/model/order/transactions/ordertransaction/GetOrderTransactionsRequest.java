@@ -19,7 +19,7 @@ public class GetOrderTransactionsRequest {
     private EbayToken requesterCredentials;
 
     @JacksonXmlProperty(localName = "IncludeFinalValueFees")
-    private boolean includeFinalValueFees;
+    private Boolean includeFinalValueFees;
 
     @JacksonXmlProperty(localName = "ItemTransactionIDArray")
     private ItemTransactionIDArray itemTransactionIDArray;
