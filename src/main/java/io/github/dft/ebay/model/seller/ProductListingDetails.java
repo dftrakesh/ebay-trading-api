@@ -10,5 +10,5 @@ public class ProductListingDetails {
     private BrandMPN brandMPN;
 
     @JacksonXmlProperty(localName = "IncludeeBayProductDetails")
-    private boolean includeeBayProductDetails;
+    private Boolean includeeBayProductDetails;
 }

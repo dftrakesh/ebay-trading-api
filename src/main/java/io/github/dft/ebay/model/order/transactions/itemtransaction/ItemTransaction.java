@@ -75,7 +75,7 @@ public class ItemTransaction implements Serializable {
     private DigitalDeliverySelected digitalDeliverySelected;
 
     @JacksonXmlProperty(localName = "eBayCollectAndRemitTax")
-    private boolean eBayCollectAndRemitTax;
+    private Boolean eBayCollectAndRemitTax;
 
     @JacksonXmlProperty(localName = "eBayCollectAndRemitTaxes")
     private EBayCollectAndRemitTaxes eBayCollectAndRemitTaxes;

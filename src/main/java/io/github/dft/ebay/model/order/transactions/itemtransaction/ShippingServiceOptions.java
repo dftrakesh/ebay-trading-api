@@ -19,7 +19,7 @@ public class ShippingServiceOptions {
     private Integer shippingServicePriority;
 
     @JacksonXmlProperty(localName = "ExpeditedService")
-    private boolean expeditedService;
+    private Boolean expeditedService;
 
     @JacksonXmlProperty(localName = "ShippingTimeMin")
     private Integer shippingTimeMin;

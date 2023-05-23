@@ -3,7 +3,7 @@ package io.github.dft.ebay;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.dataformat.xml.ser.ToXmlGenerator;
-import io.github.dft.ebay.model.AccessCredential;
+import io.github.dft.ebay.model.EbayCredentials;
 import io.github.dft.ebay.model.token.EbayToken;
 import lombok.Data;
 import lombok.SneakyThrows;
@@ -19,13 +19,13 @@ public class EbayTradingAPISdk {
     private XmlMapper xmlMapper;
     private EbayToken ebayToken;
     protected final HttpClient client;
-    protected final AccessCredential accessCredential;
+    protected final EbayCredentials ebayCredentials;
 
-    public EbayTradingAPISdk(AccessCredential accessCredential) {
+    public EbayTradingAPISdk(EbayCredentials ebayCredentials) {
         this.xmlMapper = new XmlMapper();
         this.xmlMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
-        this.ebayToken = new EbayToken(accessCredential.getEBayAuthToken());
-        this.accessCredential = accessCredential;
+        this.ebayToken = new EbayToken(ebayCredentials.getEBayAuthToken());
+        this.ebayCredentials = ebayCredentials;
         this.client = HttpClient.newHttpClient();
     }
 

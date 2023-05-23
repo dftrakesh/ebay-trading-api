@@ -1,5 +1,6 @@
 package io.github.dft.ebay.model.seller;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import io.github.dft.ebay.model.order.transactions.ListingDetails;
@@ -8,6 +9,7 @@ import lombok.Data;
 
 @Data
 @JacksonXmlRootElement(localName = "Item")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ItemType {
 
     @JacksonXmlProperty(localName = "ItemID")
@@ -25,8 +27,11 @@ public class ItemType {
     @JacksonXmlProperty(localName = "Quantity")
     private Integer quantity;
 
+    @JacksonXmlProperty(localName = "QuantityAvailable")
+    private Integer quantityAvailable;
+
     @JacksonXmlProperty(localName = "QuantityAvailableHint")
-    private Integer quantityAvailableHint;
+    private String quantityAvailableHint;
 
     @JacksonXmlProperty(localName = "SellingStatus")
     private SellingStatusType sellingStatus;
@@ -44,7 +49,7 @@ public class ItemType {
     private PictureDetailsType pictureDetails;
 
     @JacksonXmlProperty(localName = "DispatchTimeMax")
-    private String dispatchTimeMax;
+    private Integer dispatchTimeMax;
 
     @JacksonXmlProperty(localName = "ItemSpecifics")
     private ItemSpecifics itemSpecifics;
@@ -104,7 +109,7 @@ public class ItemType {
     private String hitCounter;
 
     @JacksonXmlProperty(localName = "OutOfStockControl")
-    private boolean outOfStockControl;
+    private Boolean outOfStockControl;
 
     @JacksonXmlProperty(localName = "TimeLeft")
     private String timeLeft;

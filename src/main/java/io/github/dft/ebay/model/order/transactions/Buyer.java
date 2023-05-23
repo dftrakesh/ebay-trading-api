@@ -9,7 +9,7 @@ import java.io.Serializable;
 public class Buyer implements Serializable {
 
     @JacksonXmlProperty(localName = "AboutMePage")
-    private boolean aboutMePage;
+    private Boolean aboutMePage;
 
     @JacksonXmlProperty(localName = "BuyerInfo")
     private BuyerInfo buyerInfo;
@@ -27,16 +27,16 @@ public class Buyer implements Serializable {
     private double positiveFeedbackPercent;
 
     @JacksonXmlProperty(localName = "FeedbackPrivate")
-    private boolean feedbackPrivate;
+    private Boolean feedbackPrivate;
 
     @JacksonXmlProperty(localName = "IDVerified")
-    private boolean iDVerified;
+    private Boolean iDVerified;
 
     @JacksonXmlProperty(localName = "eBayGoodStanding")
-    private boolean eBayGoodStanding;
+    private Boolean eBayGoodStanding;
 
     @JacksonXmlProperty(localName = "NewUser")
-    private boolean newUser;
+    private Boolean newUser;
 
     @JacksonXmlProperty(localName = "RegistrationDate")
     private String registrationDate;
@@ -51,7 +51,7 @@ public class Buyer implements Serializable {
     private String userID;
 
     @JacksonXmlProperty(localName = "UserIDChanged")
-    private boolean userIDChanged;
+    private Boolean userIDChanged;
 
     @JacksonXmlProperty(localName = "UserIDLastChanged")
     private String userIDLastChanged;

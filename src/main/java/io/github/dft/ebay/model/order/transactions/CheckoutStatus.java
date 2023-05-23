@@ -19,7 +19,7 @@ public class CheckoutStatus {
     private String status;
 
     @JacksonXmlProperty(localName = "IntegratedMerchantCreditCardEnabled")
-    private boolean integratedMerchantCreditCardEnabled;
+    private Boolean integratedMerchantCreditCardEnabled;
 
     @JacksonXmlProperty(localName = "PaymentInstrument")
     private String paymentInstrument;

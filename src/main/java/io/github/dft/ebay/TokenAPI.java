@@ -1,6 +1,6 @@
 package io.github.dft.ebay;
 
-import io.github.dft.ebay.model.AccessCredential;
+import io.github.dft.ebay.model.EbayCredentials;
 import io.github.dft.ebay.model.handler.JsonBodyHandler;
 import io.github.dft.ebay.model.token.AccessToken;
 import io.github.dft.ebay.model.token.AccessTokenRequest;
@@ -26,7 +26,7 @@ public class TokenAPI extends EbayTradingAPISdk {
     private final String EBAY_AUTHORIZED_TOKEN_URL = "https://api.ebay.com/identity/v1/oauth2/token";
 
     public TokenAPI() {
-        super(new AccessCredential());
+        super(new EbayCredentials());
     }
 
     @SneakyThrows

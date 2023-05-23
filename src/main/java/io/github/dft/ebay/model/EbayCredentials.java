@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(toBuilder = true)
-public class AccessCredential {
+public class EbayCredentials {
 
     private String eBayAuthToken;
     private String refreshToken;

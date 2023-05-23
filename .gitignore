@@ -1,6 +1,11 @@
-/.settings/
-/target/
-/.classpath
-/.project
-/.factorypath
-/.idea/
+HELP.md
+
+#maven
+target/
+
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr

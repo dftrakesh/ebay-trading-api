@@ -18,7 +18,7 @@ public class ShippingPackageDetails {
     public PackageWidth packageWidth;
 
     @JacksonXmlProperty(localName = "ShippingIrregular")
-    public boolean ShippingIrregular;
+    public Boolean ShippingIrregular;
 
     @JacksonXmlProperty(localName = "ShippingPackage")
     public String ShippingPackage;
