@@ -1,5 +1,6 @@
 package io.github.dft.ebay.model.order.transactions.itemtransaction;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import io.github.dft.ebay.model.order.transactions.ListingDetails;
 import io.github.dft.ebay.model.order.transactions.Seller;
@@ -7,6 +8,7 @@ import io.github.dft.ebay.model.order.transactions.SellingStatus;
 import lombok.Data;
 
 @Data
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Item {
 
     @JacksonXmlProperty(localName = "ItemID")

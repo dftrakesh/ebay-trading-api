@@ -1,14 +1,14 @@
 package io.github.dft.ebay.model.order.transactions.itemtransaction;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import io.github.dft.ebay.model.seller.PaginationResult;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 
 @Data
+@JsonIgnoreProperties(ignoreUnknown = true)
 @JacksonXmlRootElement(localName = "GetItemTransactionsResponse")
 public class GetItemTransactionsResponse {
 
