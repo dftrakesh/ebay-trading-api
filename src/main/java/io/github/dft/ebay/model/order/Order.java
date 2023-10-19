@@ -1,5 +1,6 @@
 package io.github.dft.ebay.model.order;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
@@ -10,6 +11,7 @@ import java.io.Serializable;
 import java.util.List;
 
 @Data
+@JsonIgnoreProperties(ignoreUnknown = true)
 @JacksonXmlRootElement(localName = "Order")
 public class Order implements Serializable {
 

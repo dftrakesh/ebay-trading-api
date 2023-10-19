@@ -1,5 +1,6 @@
 package io.github.dft.ebay.model.order.transactions.itemtransaction;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import io.github.dft.ebay.model.order.InternationalShippingServiceOption;
 import io.github.dft.ebay.model.order.SalesTax;
@@ -9,6 +10,7 @@ import io.github.dft.ebay.model.order.transactions.tax.TaxTable;
 import lombok.Data;
 
 @Data
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ShippingDetails {
 
     @JacksonXmlProperty(localName = "ChangePaymentInstructions")
