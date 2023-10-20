@@ -43,4 +43,7 @@ public class GetOrdersRequest {
 
     @JacksonXmlProperty(localName = "DetailLevel")
     private DetailLevelCodeType detailLevel;
+
+    @JacksonXmlProperty(localName = "IncludeFinalValueFee")
+    private Boolean includeFinalValueFee;
 }
