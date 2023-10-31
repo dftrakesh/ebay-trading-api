@@ -6,7 +6,7 @@
 
     <groupId>io.github.dftrakesh</groupId>
     <artifactId>ebay-trading-api</artifactId>
-    <version>3.5</version>
+    <version>3.6</version>
     <packaging>jar</packaging>
 
 	<name>ebay-trading-api</name>
