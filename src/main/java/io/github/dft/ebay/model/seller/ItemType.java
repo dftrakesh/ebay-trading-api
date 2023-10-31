@@ -1,5 +1,6 @@
 package io.github.dft.ebay.model.seller;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
@@ -10,6 +11,7 @@ import lombok.Data;
 @Data
 @JacksonXmlRootElement(localName = "Item")
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ItemType {
 
     @JacksonXmlProperty(localName = "ItemID")
