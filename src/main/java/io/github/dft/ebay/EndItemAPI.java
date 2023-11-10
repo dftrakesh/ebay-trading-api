@@ -32,7 +32,7 @@ public class EndItemAPI extends EbayTradingAPISdk {
         endItemRequest.setRequesterCredentials(getEbayToken());
         String payload = toStr(endItemRequest);
 
-        HttpRequest request = HttpRequest.newBuilder(new URI(XML_API_PRODUCTION_GATEWAY))
+        HttpRequest request = HttpRequest.newBuilder(URI.create(XML_API_PRODUCTION_GATEWAY))
                                          .header(HTTP_HEADER_KEY_X_EBAY_API_CALL_NAME, EBAY_API_CALL_NAME_END_ITEM)
                                          .header(HTTP_HEADER_KEY_X_EBAY_API_APP_NAME, ebayCredentials.getAppName())
                                          .header(HTTP_HEADER_KEY_X_EBAY_API_DEV_NAME, ebayCredentials.getDevName())
