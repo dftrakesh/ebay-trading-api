@@ -17,7 +17,6 @@ public class EndItemResponse {
     private String ack;
     private Integer version;
     private String build;
-    private String xmlns;
     private String text;
 
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)

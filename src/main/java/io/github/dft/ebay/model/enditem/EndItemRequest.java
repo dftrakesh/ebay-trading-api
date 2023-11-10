@@ -13,6 +13,5 @@ public class EndItemRequest {
     private EbayToken requesterCredentials;
     private String itemID;
     private EndReasonCodeType endingReason;
-    private String xmlns;
     private String text;
 }
