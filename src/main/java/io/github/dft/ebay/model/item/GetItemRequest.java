@@ -19,6 +19,9 @@ public class GetItemRequest {
 
     @JacksonXmlProperty(localName = "RequesterCredentials")
     private EbayToken requesterCredentials;
+    
+    @JacksonXmlProperty(localName = "IncludeItemSpecifics")
+    private Boolean includeItemSpecifics;
 
     @JacksonXmlProperty(localName = "DetailLevel")
     private DetailLevelCodeType detailLevel;
