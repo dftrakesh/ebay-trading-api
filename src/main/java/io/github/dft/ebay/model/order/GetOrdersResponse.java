@@ -3,6 +3,7 @@ package io.github.dft.ebay.model.order;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import io.github.dft.ebay.model.error.Errors;
 import io.github.dft.ebay.model.seller.PaginationResult;
 import lombok.Data;
 
@@ -31,4 +32,7 @@ public class GetOrdersResponse {
 
     @JacksonXmlProperty(localName = "OrderArray")
     private OrderArray orderArray;
+
+    @JacksonXmlProperty(localName = "Errors")
+    private Errors errors;
 }
