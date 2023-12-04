@@ -2,6 +2,7 @@ package io.github.dft.ebay.model.item;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import io.github.dft.ebay.model.error.Errors;
 import io.github.dft.ebay.model.seller.ItemType;
 import lombok.Data;
 
@@ -16,5 +17,8 @@ public class GetItemResponse implements Serializable {
 
     @JacksonXmlProperty(localName = "Item")
     private ItemType itemType;
+
+    @JacksonXmlProperty(localName = "Errors")
+    public Errors errors;
 
 }
