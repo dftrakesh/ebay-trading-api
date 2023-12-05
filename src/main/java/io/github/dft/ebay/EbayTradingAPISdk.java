@@ -5,6 +5,7 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.dataformat.xml.ser.ToXmlGenerator;
 import io.github.dft.ebay.model.EbayCredentials;
 import io.github.dft.ebay.model.token.AccessToken;
+import io.github.dft.ebay.model.token.AccessTokenRequest;
 import io.github.dft.ebay.model.token.EbayToken;
 import lombok.Data;
 import lombok.SneakyThrows;
@@ -43,12 +44,21 @@ public class EbayTradingAPISdk {
     }
 
     EbayToken refreshToken() {
-        if(expireDate.isBefore(LocalDateTime.now())) {
-            AccessToken accessToken = new TokenAPI().getAccessTokenFromRefreshToken(null);
+        if (expireDate.isBefore(LocalDateTime.now())) {
+            AccessToken accessToken = new TokenAPI().getAccessTokenFromRefreshToken(accessTokenRequestPayload());
             this.expireDate = LocalDateTime.now().plusSeconds(accessToken.getExpiresIn());
             ebayToken.setEBayAuthToken(accessToken.getAccessToken());
         }
         return ebayToken;
+    }
+
+    public AccessTokenRequest accessTokenRequestPayload() {
+        return AccessTokenRequest.builder()
+                                 .refreshToken(ebayCredentials.getRefreshToken())
+                                 .appId(ebayCredentials.getAppName())
+                                 .certId(ebayCredentials.getCertName())
+                                 .scopes(ebayCredentials.getScopes())
+                                 .build();
     }
 
     @SneakyThrows
