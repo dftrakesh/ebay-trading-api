@@ -11,7 +11,7 @@
 
 	<name>ebay-trading-api</name>
     <description>Ebay trading XML API using JDK 11 and Reactive Programming</description>
-    <url>https://github.com/dftrakesh/amazon-sp-api</url>
+    <url>https://github.com/dftrakesh/ebay-trading-api</url>
 
     <licenses>
         <license>
@@ -30,7 +30,7 @@
     </developers>
 
     <scm>
-        <url>https://github.com/dftrakesh/amazon-sp-api</url>
+        <url>https://github.com/dftrakesh/ebay-trading-api</url>
     </scm>
 
     <properties>

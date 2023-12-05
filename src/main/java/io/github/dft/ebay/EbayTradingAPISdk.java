@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.dataformat.xml.ser.ToXmlGenerator;
 import io.github.dft.ebay.model.EbayCredentials;
+import io.github.dft.ebay.model.token.AccessToken;
 import io.github.dft.ebay.model.token.EbayToken;
 import lombok.Data;
 import lombok.SneakyThrows;
@@ -12,6 +13,7 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
@@ -21,6 +23,7 @@ public class EbayTradingAPISdk {
 
     private XmlMapper xmlMapper;
     private EbayToken ebayToken;
+    private LocalDateTime expireDate;
     protected final HttpClient client;
     protected final EbayCredentials ebayCredentials;
 
@@ -30,14 +33,22 @@ public class EbayTradingAPISdk {
         this.ebayToken = new EbayToken(ebayCredentials.getEBayAuthToken());
         this.ebayCredentials = ebayCredentials;
         this.client = HttpClient.newHttpClient();
+        this.expireDate = LocalDateTime.now().minusMinutes(10);
     }
 
     @SneakyThrows
     public String toStr(Object t) {
         xmlMapper.configure(ToXmlGenerator.Feature.WRITE_XML_DECLARATION, true);
+        return xmlMapper.writeValueAsString(t);
+    }
 
-        String strReturn = xmlMapper.writeValueAsString(t);
-        return strReturn;
+    EbayToken refreshToken() {
+        if(expireDate.isBefore(LocalDateTime.now())) {
+            AccessToken accessToken = new TokenAPI().getAccessTokenFromRefreshToken(null);
+            this.expireDate = LocalDateTime.now().plusSeconds(accessToken.getExpiresIn());
+            ebayToken.setEBayAuthToken(accessToken.getAccessToken());
+        }
+        return ebayToken;
     }
 
     @SneakyThrows

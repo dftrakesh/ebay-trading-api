@@ -53,7 +53,7 @@ public class ItemAPI extends EbayTradingAPISdk {
 
     @SneakyThrows
     public ReviseItemResponse reviseItem(ReviseItemRequest reviseItemRequest) {
-        reviseItemRequest.setRequesterCredentials(getEbayToken());
+        reviseItemRequest.setRequesterCredentials(refreshToken());
         String payload = toStr(reviseItemRequest);
 
         HttpRequest request = HttpRequest.newBuilder(new URI(XML_API_PRODUCTION_GATEWAY))
