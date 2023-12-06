@@ -43,7 +43,7 @@ public class EbayTradingAPISdk {
         return xmlMapper.writeValueAsString(t);
     }
 
-    EbayToken refreshToken() {
+    synchronized EbayToken refreshToken() {
         if (expireDate.isBefore(LocalDateTime.now())) {
             AccessToken accessToken = new TokenAPI().getAccessTokenFromRefreshToken(accessTokenRequestPayload());
             this.expireDate = LocalDateTime.now().plusSeconds(accessToken.getExpiresIn());
