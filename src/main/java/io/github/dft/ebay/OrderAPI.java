@@ -37,7 +37,7 @@ public class OrderAPI extends EbayTradingAPISdk {
 
     @SneakyThrows
     public GetOrdersResponse getOrders(GetOrdersRequest getOrderRequest) {
-        getOrderRequest.setRequesterCredentials(getEbayToken());
+        getOrderRequest.setRequesterCredentials(refreshToken());
         String payload = toStr(getOrderRequest);
 
         HttpRequest request = HttpRequest.newBuilder(new URI(XML_API_PRODUCTION_GATEWAY))
