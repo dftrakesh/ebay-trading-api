@@ -33,7 +33,7 @@ public class ItemAPI extends EbayTradingAPISdk {
 
     @SneakyThrows
     public GetItemResponse getItem(GetItemRequest getItemRequest) {
-        getItemRequest.setRequesterCredentials(getEbayToken());
+        getItemRequest.setRequesterCredentials(refreshToken());
         String payload = toStr(getItemRequest);
 
         HttpRequest request = HttpRequest.newBuilder(new URI(XML_API_PRODUCTION_GATEWAY))
