@@ -29,7 +29,7 @@ public class EndItemAPI extends EbayTradingAPISdk {
 
     @SneakyThrows
     public EndItemResponse deleteItem(EndItemRequest endItemRequest) {
-        endItemRequest.setRequesterCredentials(getEbayToken());
+        endItemRequest.setRequesterCredentials(refreshToken());
         String payload = toStr(endItemRequest);
 
         HttpRequest request = HttpRequest.newBuilder(URI.create(XML_API_PRODUCTION_GATEWAY))
